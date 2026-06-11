@@ -62,7 +62,7 @@ router.push(`/insurance-for?gender=${gender}&dob=${dob}`);  };
   onChange={(e) => setDob(formatDob(e.target.value))}
   placeholder="MM/DD/YYYY"
   maxLength={10}
-  className="w-full border border-gray-300 rounded-lg px-4 py-4 text-lg placeholder-gray-400 focus:outline-none focus:border-[#1e2a4a]"
+  className="w-full border border-gray-300 text-gray-900 rounded-lg px-4 py-4 text-lg placeholder-gray-400 focus:outline-none focus:border-[#1e2a4a]"
 />
         </div>
 

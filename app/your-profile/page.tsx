@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 
 export default function YourProfilePage() {
   const router = useRouter();
-
+const inputClass =
+  "w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-[#1e2a4a]/20 focus:border-[#1e2a4a] transition";
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -39,12 +40,12 @@ export default function YourProfilePage() {
 
   const handleSubmit = () => {
     if (!isValid) return;
-    router.push("/next-step");
+router.push(`/congratulations?firstName=${encodeURIComponent(form.firstName)}`);
   };
 
   return (
-    <main className="min-h-screen bg-white px-4 py-10">
-      <div className="max-w-xl mx-auto">
+<main className="min-h-screen bg-white dark:bg-slate-900 px-4 py-8 sm:py-10 transition-colors">
+        <div className="max-w-xl mx-auto">
         {/* Progress */}
         <div className="flex items-center gap-3 mb-10">
           <span className="text-[#1e2a4a] font-medium whitespace-nowrap">
@@ -63,15 +64,14 @@ export default function YourProfilePage() {
         </p>
 
         {/* First & Last Name */}
-        <div className="grid grid-cols-2 gap-4 mb-5">
-          <div>
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+            <div>
             <label className="block text-sm text-[#1e2a4a] mb-1">First Name</label>
             <input
               type="text"
               value={form.firstName}
               onChange={(e) => handleChange("firstName", e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#1e2a4a]"
-            />
+className={inputClass}            />
           </div>
           <div>
             <label className="block text-sm text-[#1e2a4a] mb-1">Last Name</label>
@@ -79,8 +79,7 @@ export default function YourProfilePage() {
               type="text"
               value={form.lastName}
               onChange={(e) => handleChange("lastName", e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#1e2a4a]"
-            />
+className={inputClass}            />
           </div>
         </div>
 
@@ -91,8 +90,7 @@ export default function YourProfilePage() {
             type="email"
             value={form.email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#1e2a4a]"
-          />
+className={inputClass}          />
         </div>
 
         {/* Street Address */}
@@ -102,8 +100,7 @@ export default function YourProfilePage() {
             type="text"
             value={form.streetAddress}
             onChange={(e) => handleChange("streetAddress", e.target.value)}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#1e2a4a]"
-          />
+className={inputClass}          />
         </div>
 
         {/* Phone */}
@@ -114,8 +111,7 @@ export default function YourProfilePage() {
             value={form.phone}
             onChange={(e) => handleChange("phone", e.target.value)}
             placeholder="(999) 999-9999"
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#1e2a4a]"
-          />
+className={inputClass}          />
           {phoneError && (
             <p className="text-red-400 text-sm mt-1">{phoneError}</p>
           )}
@@ -128,8 +124,7 @@ export default function YourProfilePage() {
             id="textConsent"
             checked={textConsent}
             onChange={(e) => setTextConsent(e.target.checked)}
-            className="mt-1 accent-[#1e2a4a]"
-          />
+className={inputClass}          />
           <label htmlFor="textConsent" className="text-sm text-gray-700">
             <span className="font-bold">Text me about my insurance options</span> By checking this box,
             I consent to receive SMS messages from Healthcare.com about my insurance inquiry. Msg & data

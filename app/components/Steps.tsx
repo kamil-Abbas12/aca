@@ -27,49 +27,53 @@ const steps: StepItem[] = [
 
 export default function Step() {
   return (
-    <section className="relative overflow-hidden">
-      {/* top background */}
-      <div className="bg-[#f7f7f5] pt-14 pb-28 md:pt-20 md:pb-32">
-        <div className="mx-auto max-w-6xl px-4 text-center">
-          <h2 className="mx-auto max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-[#3b3b3b] md:text-5xl">
-            <span className="text-[#25b8f2]">3 easy</span> steps to get your
+    <section className="relative bg-[#f7f7f5] dark:bg-slate-900 py-16 sm:py-20 lg:py-24 transition-colors duration-300">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-slate-800 dark:text-white">
+            <span className="text-sky-500">3 easy</span> steps to get your
             customized
-            <br />
-            quotes <span className="text-[#25b8f2]">in minutes</span>
+            <br className="hidden sm:block" />
+            quotes <span className="text-sky-500">in minutes</span>
           </h2>
         </div>
-      </div>
 
-      {/* bottom blue strip */}
-      <div className="h-36 bg-[#21b4ee] md:h-40" />
-
-      {/* floating card */}
-      <div className="pointer-events-none absolute inset-x-0 top-[118px] px-4 md:top-[150px]">
-        <div className="mx-auto max-w-5xl rounded-[4px] bg-white shadow-[0_14px_35px_rgba(0,0,0,0.08)]">
-          <div className="grid grid-cols-1 divide-y divide-[#efefef] md:grid-cols-3 md:divide-x md:divide-y-0">
-            {steps.map((step) => (
+        {/* Steps Card */}
+        <div className="overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            {steps.map((step, index) => (
               <div
                 key={step.title}
-                className="flex min-h-[210px] flex-col items-center justify-center px-8 py-8 text-center md:min-h-[185px]"
+                className={`flex flex-col items-center justify-center text-center p-8 lg:p-10 ${
+                  index !== steps.length - 1
+                    ? "border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700"
+                    : ""
+                }`}
               >
-                <p className="mb-4 text-xs font-semibold tracking-[0.12em] text-[#9a9a9a]">
+                <p className="mb-5 text-xs font-bold tracking-[0.15em] text-slate-400 dark:text-slate-500">
                   {step.title}
                 </p>
 
-                <div className="mb-4 flex h-16 w-16 items-center justify-center text-[#3f3f46]">
+                <div className="mb-5 text-slate-700 dark:text-slate-200">
                   {step.icon}
                 </div>
 
-                <p className="max-w-[180px] text-sm leading-6 text-[#4b4b4b]">
+                <p className="max-w-[220px] text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
                   {step.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
 
-      {/* spacer so the absolute card doesn't overlap following content */}
+        {/* Bottom CTA Banner */}
+        <div className="mt-10 rounded-2xl bg-sky-500 p-6 sm:p-8 text-center shadow-lg">
+          <p className="text-base sm:text-lg font-medium text-white">
+            Get personalized health insurance options in just a few minutes.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
@@ -79,7 +83,7 @@ function DocPencilIcon() {
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      className="h-14 w-14"
+      className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -115,7 +119,7 @@ function SearchPaperIcon() {
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      className="h-14 w-14"
+      className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -139,7 +143,13 @@ function SearchPaperIcon() {
         strokeWidth="1.8"
         strokeLinecap="round"
       />
-      <circle cx="39.5" cy="37.5" r="8.5" stroke="currentColor" strokeWidth="1.8" />
+      <circle
+        cx="39.5"
+        cy="37.5"
+        r="8.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
       <path
         d="M45.5 43.5L51 49"
         stroke="currentColor"
@@ -158,7 +168,7 @@ function ShieldDollarIcon() {
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      className="h-14 w-14"
+      className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -167,7 +177,13 @@ function ShieldDollarIcon() {
         strokeWidth="1.8"
         strokeLinejoin="round"
       />
-      <circle cx="32" cy="30" r="8.5" stroke="currentColor" strokeWidth="1.8" />
+      <circle
+        cx="32"
+        cy="30"
+        r="8.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
       <path
         d="M32 24.5V35.5M35.3 27.2C35.3 26 34 25 32.3 25H31.4C29.5 25 28 26.1 28 27.6C28 29 29.2 29.7 31.2 30.1L32.8 30.4C34.8 30.8 36 31.6 36 33C36 34.5 34.5 35.6 32.6 35.6H31.7C30 35.6 28.7 34.6 28.7 33.4"
         stroke="currentColor"
