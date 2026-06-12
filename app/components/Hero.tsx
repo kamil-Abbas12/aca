@@ -51,18 +51,18 @@ export default function Hero() {
               font-black leading-[0.95] tracking-[-0.04em] mb-6
             ">
               <span className="bg-gradient-to-r from-blue-700 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
-                Better Tomorrow.
+                Smart Coverage
               </span>
               <br />
-              <span className="text-slate-900 dark:text-white">Stronger Families.</span>
+              <span className="text-slate-900 ">Stronger Families.</span>
               <br />
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Better Tomorrow.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-300 mb-8 max-w-xl">
-              Enter your <span className="font-bold text-slate-800 dark:text-white">ZIP code</span> to explore plan
+            <p className="text-lg sm:text-xl leading-relaxed text-slate-600  mb-8 max-w-xl">
+              Enter your <span className="font-bold text-slate-800">ZIP code</span> to explore plan
               options, check availability, and get started with{" "}
               <span className="font-bold text-blue-600">Top Dog Leads LLC</span>.
             </p>
@@ -121,7 +121,7 @@ export default function Hero() {
             </div>
 
             {/* Benefits */}
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-gray-900 ">
               {[
                 "Compare quotes from top-rated providers",
                 "Get expert guidance from licensed professionals",
