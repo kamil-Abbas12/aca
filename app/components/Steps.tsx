@@ -10,17 +10,17 @@ type StepItem = {
 const steps: StepItem[] = [
   {
     title: "STEP ONE",
-    description: "Start by entering your ZIP code",
+    description: "Share Your ZIP Code",
     icon: <DocPencilIcon />,
   },
   {
     title: "STEP TWO",
-    description: "Answer a few easy questions",
+    description: "Answer Quick Questions",
     icon: <SearchPaperIcon />,
   },
   {
     title: "STEP THREE",
-    description: "See plan options",
+    description: "Compare & Save",
     icon: <ShieldDollarIcon />,
   },
 ];
@@ -32,10 +32,9 @@ export default function Step() {
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-slate-800 dark:text-white">
-            <span className="text-sky-500">3 easy</span> steps to get your
-            customized
+            Your <span className="text-sky-500">Perfect Plan</span> Is Just
             <br className="hidden sm:block" />
-            quotes <span className="text-sky-500">in minutes</span>
+            <span className="text-sky-500">3 Clicks</span> Away
           </h2>
         </div>
 
@@ -70,7 +69,7 @@ export default function Step() {
         {/* Bottom CTA Banner */}
         <div className="mt-10 rounded-2xl bg-sky-500 p-6 sm:p-8 text-center shadow-lg">
           <p className="text-base sm:text-lg font-medium text-white">
-            Get personalized health insurance options in just a few minutes.
+            More Choices. Better Rates. Faster Results.
           </p>
         </div>
       </div>

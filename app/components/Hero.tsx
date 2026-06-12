@@ -25,98 +25,109 @@ export default function Hero() {
 
           {/* Left Content */}
           <div className="order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 dark:text-white mb-6">
-              Choose the Best Health Insurance for You and Your Family
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+              <span className="text-slate-900 dark:text-white">Smart Coverage.</span>
+              <br />
+              <span className="text-slate-900 dark:text-white">Stronger Families.</span>
+              <br />
+              <span className="text-blue-600">Better Tomorrow.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-6">
-              Confirm your{" "}
-              <span className="font-bold">ZIP code</span> to access pricing,
-              availability, and enrollment options for your location.
+              Enter your <span className="font-bold">ZIP code</span> to explore plan
+              options, check availability, and get started with{" "}
+              <span className="font-bold text-blue-600">Top dog Leads LLc</span>.
             </p>
 
             {/* ZIP Form */}
-            <div className="flex flex-col sm:flex-row gap-3 max-w-xl mb-8">
-              <input
-                type="text"
-                value={zipCode}
-                onChange={(e) =>
-                  setZipCode(e.target.value.replace(/\D/g, "").slice(0, 5))
-                }
-                placeholder="Enter ZIP Code"
-                maxLength={5}
-                inputMode="numeric"
-                className="
-                  flex-1
-                  h-14 sm:h-16
-                  px-5
-                  rounded-xl
-                  border
-                  border-slate-300
-                  bg-white
-                  dark:bg-slate-800
-                  dark:border-slate-700
-                  text-slate-900
-                  dark:text-white
-                  placeholder:text-slate-400
-                  focus:outline-none
-                  focus:ring-4
-                  focus:ring-[#f5b526]/30
-                  focus:border-[#f5b526]
-                  transition-all
-                "
-              />
+            <div className="flex flex-col sm:flex-row gap-3 max-w-xl mb-6">
+              <div className="relative w-full flex-1">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                  📍
+                </span>
+                <input
+                  type="text"
+                  value={zipCode}
+                  onChange={(e) =>
+                    setZipCode(e.target.value.replace(/\D/g, "").slice(0, 5))
+                  }
+                  placeholder="Enter ZIP Code"
+                  maxLength={5}
+                  inputMode="numeric"
+                  className="
+                    w-full
+                    h-14 sm:h-16
+                    pl-11 pr-5
+                    rounded-xl
+                    border
+                    border-slate-200
+                    bg-white
+                    dark:bg-slate-800
+                    dark:border-slate-700
+                    text-slate-900
+                    dark:text-white
+                    placeholder:text-slate-400
+                    focus:outline-none
+                    focus:ring-4
+                    focus:ring-blue-500/20
+                    focus:border-blue-500
+                    transition-all
+                  "
+                />
+              </div>
 
               <button
                 onClick={handleSubmit}
                 className="
+                  w-full sm:w-auto
                   h-14 sm:h-16
                   px-8 sm:px-10
-                  bg-[#f5b526]
-                  hover:bg-[#e6a91f]
+                  bg-blue-600
+                  hover:bg-blue-700
                   rounded-xl
                   font-bold
                   text-base sm:text-lg
-                  text-slate-900
+                  text-white
                   transition-all
                   shadow-md
                   hover:shadow-lg
                   cursor-pointer
+                  whitespace-nowrap
                 "
               >
-                See Options
+                View Plans
               </button>
             </div>
 
             {/* Customer Card */}
-            <div className="inline-flex items-center gap-3 rounded-xl bg-white dark:bg-slate-800 shadow-md px-4 py-3 mb-8">
-              <div className="w-11 h-11 rounded-full border-2 border-blue-500 flex items-center justify-center">
+            <div className="inline-flex items-center gap-3 rounded-xl bg-white dark:bg-slate-800 shadow-md px-4 py-3 mb-6 w-full sm:w-auto">
+              <div className="w-11 h-11 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
                 <span className="text-lg">👥</span>
               </div>
 
               <div>
                 <p className="font-bold text-blue-600 text-sm">
-                  5+ MILLION CUSTOMERS
+                  100,000+ FAMILIES
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                  have chosen us for their health insurance needs.
+                  have trusted Top dog Leads LLc for their coverage.
                 </p>
               </div>
             </div>
 
             {/* Benefits */}
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {[
-                "Access the same pricing as agents for 100+ plans",
-                "Get your questions answered by licensed insurance agents",
-                "Compare plan options customized for you",
-                "Secure the right coverage for you & enroll via phone",
+                "Compare quotes from top-rated providers",
+                "Get expert guidance from licensed professionals",
+                "Find plans that fit your needs and budget",
+                "Simple, fast, and secure enrollment by phone",
               ].map((item) => (
                 <li
                   key={item}
                   className="flex items-start gap-3 text-slate-700 dark:text-slate-300"
                 >
-                  <span className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-green-500 text-xs text-white">
+                  <span className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-green-500 text-xs text-white flex-shrink-0">
                     ✓
                   </span>
                   <span>{item}</span>
@@ -142,15 +153,27 @@ export default function Hero() {
       </div>
 
       {/* Bottom Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-        <div className="rounded-xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-md p-4 sm:p-5 flex items-start gap-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
-          <span className="text-xl flex-shrink-0">📋</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
+        <div className="relative rounded-2xl bg-white dark:bg-slate-800 shadow-md px-5 sm:px-8 py-5 sm:py-6 flex items-center gap-4 sm:gap-6 overflow-hidden">
+          <div className="flex h-12 w-12 sm:h-14 sm:w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 text-white text-2xl sm:text-3xl shadow-lg">
+            🛡️
+          </div>
 
-          <p>
-            Our network of licensed agents can walk you through multiple plan
-            options, including major medical, short-term coverage, indemnity
-            plans, and others.
-          </p>
+          <div>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white mb-1">
+              We Shop. <span className="text-blue-600">You Save.</span> Real
+              Coverage That Fits.
+            </h3>
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">
+              Our licensed agents compare multiple plans from top carriers so
+              you get the right coverage at the right price—including major
+              medical, short-term plans, indemnity options, and more.
+            </p>
+          </div>
+
+          <span className="hidden sm:block absolute right-6 top-1/2 -translate-y-1/2 text-2xl text-blue-300">
+            ✨
+          </span>
         </div>
       </div>
     </section>

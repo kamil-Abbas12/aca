@@ -13,9 +13,9 @@ export default function Navbar() {
           <Link href="/" className="flex flex-col items-center sm:items-start">
             <div className="flex items-center">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Healthcare Logo"
-                width={280}
+                width={90}
                 height={60}
                 priority
               />
