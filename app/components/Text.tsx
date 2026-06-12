@@ -17,7 +17,7 @@ export default function Text() {
                 <span className="text-blue-600">General Information</span>
               </h3>
               <p>
-                The content on this website, TopDogLeadsLLC.com, is for
+                The content on this website, topdoglead.com, is for
                 general informational purposes only. Top Dog Leads LLC is a
                 health insurance agency and is not connected with or endorsed
                 by the U.S. government or the federal Medicare program. The

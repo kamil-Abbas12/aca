@@ -1,66 +1,97 @@
-// components/footer.tsx
+// components/Footer.tsx
 import React from "react";
 
+function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l1.88-1.88a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1V20a1 1 0 01-1 1C8.92 21 3 15.08 3 8a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-1.43 1.8z" />
+    </svg>
+  );
+}
+
+function ShieldCheckIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path fillRule="evenodd" d="M11.197 2.195a1 1 0 01.606 0l7 2.333A1 1 0 0120 5.472v5.528c0 5.017-3.743 9.59-9 10.454-5.257-.864-9-5.437-9-10.454V5.472a1 1 0 01.197-.944l7-2.333zM10.293 12.293a1 1 0 011.414 0L13 13.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
+function ChevronIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" {...props}>
+      <path fillRule="evenodd" d="M7.293 4.293a1 1 0 011.414 0L13 8.586a1 1 0 010 1.414L8.707 14.293a1 1 0 01-1.414-1.414L10.586 10 7.293 6.707a1 1 0 010-1.414z" clipRule="evenodd" />
+    </svg>
+  );
+}
+
 const quickLinks = [
-  { label: "About Us", href: "#" },
-  { label: "Contact Us", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "Do Not Call Policy", href: "#" },
-  { label: "Licensing Information", href: "#" },
-  { label: "Partner Companies", href: "#" },
+  { label: "About us", href: "#" },
+  { label: "Contact us", href: "#" },
+  { label: "Privacy policy", href: "#" },
+  { label: "Terms & conditions", href: "#" },
+  { label: "Do not call policy", href: "#" },
+  { label: "Licensing information", href: "#" },
+  { label: "Partner companies", href: "#" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d2338] text-white">
-      <div className="mx-auto max-w-6xl px-6 py-10 md:px-8 md:py-12">
-        {/* Top: Call banner */}
-        <div className="flex flex-col gap-4 rounded-2xl bg-white/5 p-6 md:flex-row md:items-center md:justify-between">
+    <footer className="bg-[#0D0B1A] text-[#EEEDFE]">
+      <div className="mx-auto max-w-5xl px-6 py-12 md:px-10">
+
+        {/* Call banner */}
+        <div className="flex flex-col gap-4 rounded-2xl border border-[#2A2650] bg-[#13102B] p-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-lg font-semibold text-white">
-              Need Help Finding The Right Coverage?
+            <p className="text-base font-medium text-[#EEEDFE]">
+              Need help finding the right coverage?
             </p>
-            <p className="mt-1 text-sm text-[#e1e7ed]">
+            <p className="mt-1 text-sm text-[#6B6A80]">
               Speak with a licensed insurance specialist today.
             </p>
           </div>
-
           <a
             href="tel:+18668960447"
-            className="inline-flex items-center gap-2 text-2xl font-bold leading-none text-[#f28a3a] md:text-[2rem]"
+            className="inline-flex items-center gap-2.5 rounded-xl border border-[#7F77DD] bg-[#534AB7] px-5 py-3 text-lg font-medium text-[#EEEDFE] whitespace-nowrap"
           >
             <PhoneIcon />
-            <span>+186 689 60447</span>
+            +1 866 896 0447
           </a>
         </div>
 
-        <div className="my-8 border-t border-white/15" />
+        <div className="my-8 border-t border-[#2A2650]" />
 
-        {/* Middle */}
+        {/* Main grid */}
         <div className="grid gap-10 md:grid-cols-3">
-          {/* About */}
+          {/* Brand */}
           <div>
-            <h3 className="mb-3 text-xl font-semibold text-white">
-              About Top Dog Leads LLC
-            </h3>
-            <p className="text-[15px] leading-6 text-[#e1e7ed]">
-              At <span className="font-semibold text-[#f28a3a]">Top Dog Leads LLC</span>,
-              we help individuals and families compare health coverage
-              options from trusted insurance providers. Our goal is to make
-              finding the right plan simple, transparent, and stress-free.
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-[#7F77DD]/35 bg-[#7F77DD]/15 text-[#7F77DD]">
+                <ShieldCheckIcon className="h-4 w-4" />
+              </div>
+              <span className="text-sm font-medium text-[#EEEDFE]">Top Dog Leads LLC</span>
+            </div>
+            <p className="text-sm leading-relaxed text-[#6B6A80]">
+              We help individuals and families compare health coverage options
+              from trusted insurance providers — simple, transparent, stress-free.
             </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["Secure", "Licensed", "Trusted"].map((t) => (
+                <span key={t} className="rounded-full border border-[#7F77DD]/30 bg-[#534AB7]/12 px-3 py-1 text-xs text-[#7F77DD]">
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick links */}
           <div>
-            <h3 className="mb-3 text-xl font-semibold text-white">
-              Quick Links
-            </h3>
-            <ul className="space-y-2 text-[15px] leading-6 text-white">
+            <h3 className="mb-4 text-sm font-medium text-[#EEEDFE]">Quick links</h3>
+            <ul className="space-y-2.5">
               {quickLinks.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} className="underline underline-offset-2">
+                  <a href={item.href} className="flex items-center gap-1.5 text-sm text-[#6B6A80] hover:text-[#AFA9EC]">
+                    <ChevronIcon className="h-3 w-3 text-[#534AB7]" />
                     {item.label}
                   </a>
                 </li>
@@ -68,87 +99,64 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Information */}
+          {/* Company info */}
           <div>
-            <h3 className="mb-3 text-xl font-semibold text-white">
-              Company Information
-            </h3>
-            <p className="text-[14px] leading-6 text-[#e1e7ed]">
-              Top Dog Leads LLC is an independent marketing and lead
-              generation company that connects consumers with licensed
-              insurance professionals.
+            <h3 className="mb-4 text-sm font-medium text-[#EEEDFE]">Company information</h3>
+            <p className="text-sm leading-relaxed text-[#6B6A80]">
+              Top Dog Leads LLC is an independent marketing and lead generation
+              company that connects consumers with licensed insurance professionals.
             </p>
-            <p className="mt-3 text-[14px] leading-6 text-[#e1e7ed]">
-              We are not affiliated with or endorsed by the U.S. government,
-              Healthcare.gov, Medicare, or any federal agency.
+            <p className="mt-3 text-sm leading-relaxed text-[#6B6A80]">
+              Not affiliated with the U.S. government, Healthcare.gov, Medicare,
+              or any federal agency.
             </p>
-            <p className="mt-3 text-[14px] leading-6 text-[#e1e7ed]">
-              Coverage availability, plan benefits, premiums, and eligibility
-              requirements vary by carrier, state, and individual
-              circumstances.
+            <p className="mt-3 text-sm leading-relaxed text-[#6B6A80]">
+              Coverage availability and premiums vary by carrier, state, and
+              individual circumstances.
             </p>
           </div>
         </div>
 
-        <div className="my-8 border-t border-white/15" />
+        <div className="my-8 border-t border-[#2A2650]" />
 
-        {/* Privacy Commitment */}
-        <div className="text-[14px] leading-6 text-[#e1e7ed]">
-          <h3 className="mb-2 text-lg font-semibold text-white">
-            Privacy Commitment
-          </h3>
-          <p>
-            We value your privacy and are committed to protecting your
-            personal information. If you would like to exercise your privacy
-            rights, update your information, or submit a request regarding
-            your data, please contact us through our support team.
-          </p>
+        {/* Privacy + Disclosure */}
+        <div className="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3 className="mb-2 text-sm font-medium text-[#EEEDFE]">Privacy commitment</h3>
+            <p className="text-xs leading-relaxed text-[#6B6A80]">
+              We value your privacy and are committed to protecting your personal
+              information. Contact our support team to exercise your privacy rights
+              or update your data.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-sm font-medium text-[#EEEDFE]">Important disclosure</h3>
+            <p className="text-xs leading-relaxed text-[#6B6A80]">
+              By submitting your information, you agree that{" "}
+              <span className="font-medium text-[#AFA9EC]">Top Dog Leads LLC</span>{" "}
+              and its licensed partners may contact you regarding insurance products,
+              even if your number is on a Do Not Call registry. Consent is not
+              required to purchase any product or service.
+            </p>
+          </div>
         </div>
 
-        <div className="my-8 border-t border-white/15" />
-
-        {/* Important Disclosure */}
-        <div className="text-[14px] leading-6 text-[#e1e7ed]">
-          <h3 className="mb-2 text-lg font-semibold text-white">
-            Important Disclosure
-          </h3>
-          <p>
-            By submitting your information, you agree that{" "}
-            <span className="font-semibold text-[#f28a3a]">
-              Top Dog Leads LLC
-            </span>{" "}
-            and its licensed partners may contact you by phone, email, text
-            message, or automated technology regarding insurance products and
-            services, even if your number is listed on a federal or state Do
-            Not Call registry.
-          </p>
-          <p className="mt-3">Consent is not required to purchase any product or service.</p>
-        </div>
-
-        <div className="my-8 border-t border-white/15" />
+        <div className="my-8 border-t border-[#2A2650]" />
 
         {/* Bottom */}
-        <div className="flex flex-col gap-3 text-center md:text-left">
-          <p className="text-[14px] text-[#e1e7ed]">
-            © 2026 Top Dog Leads LLC. All Rights Reserved.
-          </p>
-          <p className="text-[15px] font-semibold text-white">
-            Better Coverage. Better Choices. Better For You.
-          </p>
-          <p className="text-[13px] text-[#9fb0c2]">
-            Your information is protected using industry-standard security
-            and privacy practices.
+        <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-xs text-[#6B6A80]">© 2026 Top Dog Leads LLC. All rights reserved.</p>
+            <p className="mt-1 text-xs text-[#3C3A50]">
+              Your information is protected using industry-standard security practices.
+            </p>
+          </div>
+          <p className="text-sm font-medium text-[#AFA9EC]">
+            Better coverage. Better choices. Better for you.
           </p>
         </div>
+
       </div>
     </footer>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
-      <path d="M6.6 10.8c1.8 3.5 3.1 4.9 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.5 22 2 13.5 2 3c0-.6.4-1 1-1h4.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.3 1.1l-2.2 2.2Z" />
-    </svg>
   );
 }

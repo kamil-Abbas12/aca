@@ -19,30 +19,58 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#dfeaf2] dark:bg-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-100 dark:bg-slate-900 transition-colors duration-300">
+      {/* Layered background design */}
+      <div className="absolute inset-0">
+        {/* Diagonal gradient base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-blue-100 to-cyan-100" />
+
+        {/* Wave shape at bottom */}
+        <svg
+          className="absolute bottom-0 left-0 w-full text-white/40 dark:text-slate-800/40"
+          viewBox="0 0 1440 200"
+          preserveAspectRatio="none"
+          fill="currentColor"
+        >
+          <path d="M0,120 C240,200 480,40 720,80 C960,120 1200,200 1440,100 L1440,200 L0,200 Z" />
+        </svg>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
           {/* Left Content */}
           <div className="order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-              <span className="text-slate-900 dark:text-white">Smart Coverage.</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/90 shadow-lg 
+            backdrop-blur-sm px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-800 shadow-sm ring-1 ring-blue-100 mb-5">
+              ⭐ Trusted Health Coverage Partner
+            </span>
+
+            <h1 className="
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+              font-black leading-[0.95] tracking-[-0.04em] mb-6
+            ">
+              <span className="bg-gradient-to-r from-blue-700 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
+                Better Tomorrow.
+              </span>
               <br />
               <span className="text-slate-900 dark:text-white">Stronger Families.</span>
               <br />
-              <span className="text-blue-600">Better Tomorrow.</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Better Tomorrow.
+              </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-6">
-              Enter your <span className="font-bold">ZIP code</span> to explore plan
+            <p className="text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-300 mb-8 max-w-xl">
+              Enter your <span className="font-bold text-slate-800 dark:text-white">ZIP code</span> to explore plan
               options, check availability, and get started with{" "}
-              <span className="font-bold text-blue-600">Top dog Leads LLc</span>.
+              <span className="font-bold text-blue-600">Top Dog Leads LLC</span>.
             </p>
 
             {/* ZIP Form */}
             <div className="flex flex-col sm:flex-row gap-3 max-w-xl mb-6">
               <div className="relative w-full flex-1">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400">
                   📍
                 </span>
                 <input
@@ -55,22 +83,11 @@ export default function Hero() {
                   maxLength={5}
                   inputMode="numeric"
                   className="
-                    w-full
-                    h-14 sm:h-16
-                    pl-11 pr-5
-                    rounded-xl
-                    border
-                    border-slate-200
-                    bg-white
-                    dark:bg-slate-800
-                    dark:border-slate-700
-                    text-slate-900
-                    dark:text-white
-                    placeholder:text-slate-400
-                    focus:outline-none
-                    focus:ring-4
-                    focus:ring-blue-500/20
-                    focus:border-blue-500
+                    w-full h-14 sm:h-16 pl-11 pr-5 rounded-xl
+                    border border-blue-100 bg-white/90 backdrop-blur-sm shadow-sm
+                    dark:bg-slate-800 dark:border-slate-700
+                    text-slate-900 dark:text-white placeholder:text-slate-400
+                    focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500
                     transition-all
                   "
                 />
@@ -79,20 +96,11 @@ export default function Hero() {
               <button
                 onClick={handleSubmit}
                 className="
-                  w-full sm:w-auto
-                  h-14 sm:h-16
-                  px-8 sm:px-10
-                  bg-blue-600
-                  hover:bg-blue-700
-                  rounded-xl
-                  font-bold
-                  text-base sm:text-lg
-                  text-white
-                  transition-all
-                  shadow-md
-                  hover:shadow-lg
-                  cursor-pointer
-                  whitespace-nowrap
+                  w-full sm:w-auto h-14 sm:h-16 px-10 rounded-xl
+                  font-bold text-lg text-white
+                  bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500
+                  hover:scale-[1.02] transition-all duration-300
+                  shadow-xl shadow-blue-500/30
                 "
               >
                 View Plans
@@ -100,17 +108,14 @@ export default function Hero() {
             </div>
 
             {/* Customer Card */}
-            <div className="inline-flex items-center gap-3 rounded-xl bg-white dark:bg-slate-800 shadow-md px-4 py-3 mb-6 w-full sm:w-auto">
-              <div className="w-11 h-11 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="inline-flex items-center gap-3 rounded-xl bg-white/80 backdrop-blur-sm shadow-sm ring-1 ring-blue-100 px-4 py-3 mb-6 w-full sm:w-auto dark:bg-slate-800 dark:ring-slate-700">
+              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center flex-shrink-0">
                 <span className="text-lg">👥</span>
               </div>
-
               <div>
-                <p className="font-bold text-blue-600 text-sm">
-                  100,000+ FAMILIES
-                </p>
+                <p className="font-bold text-blue-600 text-sm">100,000+ FAMILIES</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                  have trusted Top dog Leads LLc for their coverage.
+                  have trusted Top Dog Leads LLC for their coverage.
                 </p>
               </div>
             </div>
@@ -123,11 +128,8 @@ export default function Hero() {
                 "Find plans that fit your needs and budget",
                 "Simple, fast, and secure enrollment by phone",
               ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 text-slate-700 dark:text-slate-300"
-                >
-                  <span className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-green-500 text-xs text-white flex-shrink-0">
+                <li key={item} className="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <span className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-emerald-500 text-xs text-white flex-shrink-0 shadow-sm shadow-green-500/30">
                     ✓
                   </span>
                   <span>{item}</span>
@@ -137,8 +139,8 @@ export default function Hero() {
           </div>
 
           {/* Right Image */}
-          <div className="order-1 lg:order-2">
-            <div className="relative h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-2xl shadow-xl">
+          <div className="order-2 lg:order-1 lg:p-8 rounded-3xl bg-white/30 backdrop-blur-md border border-white/40">
+            <div className="relative h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/50">
               <Image
                 src="/family.png"
                 alt="Happy family"
@@ -146,6 +148,7 @@ export default function Hero() {
                 priority
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent" />
             </div>
           </div>
 
@@ -153,27 +156,25 @@ export default function Hero() {
       </div>
 
       {/* Bottom Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
-        <div className="relative rounded-2xl bg-white dark:bg-slate-800 shadow-md px-5 sm:px-8 py-5 sm:py-6 flex items-center gap-4 sm:gap-6 overflow-hidden">
-          <div className="flex h-12 w-12 sm:h-14 sm:w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 text-white text-2xl sm:text-3xl shadow-lg">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
+        <div className="relative rounded-2xl bg-white/85 backdrop-blur-sm shadow-lg ring-1 ring-blue-100 px-5 sm:px-8 py-5 sm:py-6 flex items-center gap-4 sm:gap-6 overflow-hidden dark:bg-slate-800">
+          <div className="flex h-12 w-12 sm:h-14 sm:w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-2xl sm:text-3xl shadow-lg shadow-blue-500/30">
             🛡️
           </div>
-
           <div>
             <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white mb-1">
-              We Shop. <span className="text-blue-600">You Save.</span> Real
-              Coverage That Fits.
+              We Shop.{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                You Save.
+              </span>{" "}
+              Real Coverage That Fits.
             </h3>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400">
               Our licensed agents compare multiple plans from top carriers so
-              you get the right coverage at the right price—including major
+              you get the right coverage at the right price — including major
               medical, short-term plans, indemnity options, and more.
             </p>
           </div>
-
-          <span className="hidden sm:block absolute right-6 top-1/2 -translate-y-1/2 text-2xl text-blue-300">
-            ✨
-          </span>
         </div>
       </div>
     </section>

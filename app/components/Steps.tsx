@@ -5,202 +5,159 @@ type StepItem = {
   title: string;
   description: string;
   icon: React.ReactNode;
+  sub: string
 };
 
 const steps: StepItem[] = [
   {
-    title: "STEP ONE",
-    description: "Share Your ZIP Code",
-    icon: <DocPencilIcon />,
+    title: "Step 01",
+    description: "Share your ZIP code",
+    sub: "We use your location to find plans available in your area.",
+    icon: <MapPinIcon />,
   },
   {
-    title: "STEP TWO",
-    description: "Answer Quick Questions",
-    icon: <SearchPaperIcon />,
+    title: "Step 02",
+    description: "Answer quick questions",
+    sub: "Tell us a little about yourself. It takes under 60 seconds.",
+    icon: <ClipboardIcon />,
   },
   {
-    title: "STEP THREE",
+    title: "Step 03",
     description: "Compare & Save",
-    icon: <ShieldDollarIcon />,
+    sub: "See your top matches side by side and pick what fits best.",
+    icon: <ShieldCheckIcon />,
   },
 ];
 
 export default function Step() {
   return (
-    <section className="relative bg-[#f7f7f5] dark:bg-slate-900 py-16 sm:py-20 lg:py-24 transition-colors duration-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#0D0B1A] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl">
+
+        {/* Badge */}
+        <div className="flex justify-center mb-5">
+          <div className="flex items-center gap-2 bg-[#7F77DD]/10 border border-[#7F77DD]/30 rounded-full px-4 py-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#7F77DD]" />
+            <span className="text-xs font-medium tracking-widest text-[#AFA9EC] uppercase">
+              How it works
+            </span>
+          </div>
+        </div>
+
         {/* Heading */}
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-slate-800 dark:text-white">
-            Your <span className="text-sky-500">Perfect Plan</span> Is Just
-            <br className="hidden sm:block" />
-            <span className="text-sky-500">3 Clicks</span> Away
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-medium leading-snug text-[#EEEDFE]">
+            Your <span className="text-[#7F77DD]">perfect plan</span> is just
+            <br />
+            <span className="text-[#7F77DD]">3 steps</span> away
           </h2>
+          <p className="mt-3 text-sm text-[#6B6A80]">
+            No forms to fill. No agents to call. Get matched in minutes.
+          </p>
         </div>
 
         {/* Steps Card */}
-        <div className="overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-xl">
+        <div className="rounded-2xl border border-[#2A2650] bg-[#13102B] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3">
             {steps.map((step, index) => (
               <div
                 key={step.title}
-                className={`flex flex-col items-center justify-center text-center p-8 lg:p-10 ${
+                className={`flex flex-col items-center text-center px-7 py-11 ${
                   index !== steps.length - 1
-                    ? "border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700"
+                    ? "border-b md:border-b-0 md:border-r border-[#2A2650]"
                     : ""
                 }`}
               >
-                <p className="mb-5 text-xs font-bold tracking-[0.15em] text-slate-400 dark:text-slate-500">
+                <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-[#534AB7] mb-5">
                   {step.title}
                 </p>
-
-                <div className="mb-5 text-slate-700 dark:text-slate-200">
-                  {step.icon}
+                <div className="relative mb-6">
+                  <div className="absolute inset-[-8px] rounded-[22px] border border-[#7F77DD]/20" />
+                  <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#534AB7]/20 border border-[#7F77DD]/40 flex items-center justify-center text-[#AFA9EC]">
+                    {step.icon}
+                  </div>
                 </div>
-
-                <p className="max-w-[220px] text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                <p className="text-base font-medium text-[#EEEDFE] mb-2">
                   {step.description}
+                </p>
+                <p className="text-sm text-[#6B6A80] leading-relaxed max-w-[170px]">
+                  {step.sub}
                 </p>
               </div>
             ))}
           </div>
+
+          {/* Divider */}
+          <div className="h-px bg-[#2A2650]" />
+
+          {/* Card Footer */}
+          <div className="flex items-center justify-between px-8 py-5 gap-4">
+            <p className="text-sm text-[#6B6A80] flex items-center gap-2">
+              🔒 Your data is never sold or shared.
+            </p>
+            <button className="flex items-center gap-2 bg-[#534AB7] border border-[#7F77DD] rounded-xl px-5 py-2.5 text-sm font-medium text-[#EEEDFE] whitespace-nowrap">
+              Get started free →
+            </button>
+          </div>
         </div>
 
-        {/* Bottom CTA Banner */}
-        <div className="mt-10 rounded-2xl bg-sky-500 p-6 sm:p-8 text-center shadow-lg">
-          <p className="text-base sm:text-lg font-medium text-white">
-            More Choices. Better Rates. Faster Results.
-          </p>
+        {/* Bottom CTA */}
+        <div className="mt-4 rounded-2xl border border-[#2A2650] bg-[#13102B] p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <h3 className="text-lg font-medium text-[#EEEDFE] mb-1">
+              More choices. Better rates. Faster results.
+            </h3>
+            <p className="text-sm text-[#6B6A80]">
+              Join 50,000+ users who found better coverage this year.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {["No credit card", "Cancel anytime", "2-min setup"].map((t) => (
+                <span
+                  key={t}
+                  className="text-xs text-[#AFA9EC] bg-[#534AB7]/15 border border-[#7F77DD]/30 rounded-full px-3 py-1"
+                >
+                  ✓ {t}
+                </span>
+              ))}
+            </div>
+          </div>
+          <button className="flex items-center gap-2 bg-[#7F77DD] rounded-xl px-6 py-3 text-sm font-medium text-white whitespace-nowrap flex-shrink-0">
+            🚀 Start now
+          </button>
         </div>
+
       </div>
     </section>
   );
 }
 
-function DocPencilIcon() {
+function MapPinIcon() {
   return (
-    <svg
-      viewBox="0 0 64 64"
-      fill="none"
-      className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="12"
-        y="10"
-        width="30"
-        height="40"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-      <path
-        d="M19 21H34M19 27H34M19 33H29"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M35.5 37.5L46.8 26.2C48.3 24.7 50.7 24.7 52.2 26.2V26.2C53.7 27.7 53.7 30.1 52.2 31.6L40.9 42.9L34 45L35.5 37.5Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <circle cx="50.5" cy="15.5" r="1.2" fill="#9adffd" />
-      <circle cx="54.5" cy="20.5" r="1.2" fill="#9adffd" />
-      <circle cx="47.5" cy="20.5" r="1.2" fill="#9adffd" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+      strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <path d="M12 21C12 21 5 13.5 5 8.5a7 7 0 0 1 14 0c0 5-7 12.5-7 12.5z" />
+      <circle cx="12" cy="8.5" r="2.5" />
     </svg>
   );
 }
 
-function SearchPaperIcon() {
+function ClipboardIcon() {
   return (
-    <svg
-      viewBox="0 0 64 64"
-      fill="none"
-      className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="18"
-        y="12"
-        width="28"
-        height="36"
-        rx="3"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-      <path
-        d="M14 17V43C14 44.7 15.3 46 17 46"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M22 22H38M22 28H38M22 34H31"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <circle
-        cx="39.5"
-        cy="37.5"
-        r="8.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-      <path
-        d="M45.5 43.5L51 49"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <circle cx="49.5" cy="14.5" r="1.2" fill="#9adffd" />
-      <circle cx="53.5" cy="19.5" r="1.2" fill="#9adffd" />
-      <circle cx="46.5" cy="19.5" r="1.2" fill="#9adffd" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+      strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <rect x="8" y="2" width="8" height="4" rx="1" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+      <path d="M9 12h6M9 16h4" />
     </svg>
   );
 }
 
-function ShieldDollarIcon() {
+function ShieldCheckIcon() {
   return (
-    <svg
-      viewBox="0 0 64 64"
-      fill="none"
-      className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M32 10L49 16V29C49 39.5 42.1 48.8 32 52C21.9 48.8 15 39.5 15 29V16L32 10Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <circle
-        cx="32"
-        cy="30"
-        r="8.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-      <path
-        d="M32 24.5V35.5M35.3 27.2C35.3 26 34 25 32.3 25H31.4C29.5 25 28 26.1 28 27.6C28 29 29.2 29.7 31.2 30.1L32.8 30.4C34.8 30.8 36 31.6 36 33C36 34.5 34.5 35.6 32.6 35.6H31.7C30 35.6 28.7 34.6 28.7 33.4"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M50 13L52.5 10.5M54 17H57"
-        stroke="#ffb44c"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M14 16L12 13.5M10 20H7"
-        stroke="#9adffd"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"
+      strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <path d="M12 3l7 3v5c0 5-3.5 9-7 10C8.5 20 5 16 5 11V6l7-3z" />
+      <path d="M9 12l2 2 4-4" />
     </svg>
   );
 }

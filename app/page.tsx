@@ -13,7 +13,6 @@ export default function Home() {
     <Hero/>
     <Step/>
     <Healthcare/>
-    <Text/>
     <Footer/>
     </>
   );
