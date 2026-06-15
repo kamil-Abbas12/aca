@@ -128,7 +128,7 @@ export default function Hero() {
                 "Find plans that fit your needs and budget",
                 "Simple, fast, and secure enrollment by phone",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                <li key={item} className="flex items-start gap-3 text-slate-700">
                   <span className="mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-br from-green-400 to-emerald-500 text-xs text-white flex-shrink-0 shadow-sm shadow-green-500/30">
                     ✓
                   </span>

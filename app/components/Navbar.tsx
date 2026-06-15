@@ -1,6 +1,8 @@
-// app/components/Navbar.tsx
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 const navLinks = [
   { label: "About Us", href: "#" },
@@ -9,12 +11,32 @@ const navLinks = [
   { label: "Licensing Information", href: "#" },
 ];
 
+const blogLinks = [
+  { label: "Blog Grid", href: "/blog" },
+  { label: "Blog Sidebar", href: "/blog/sidebar" },
+];
+
 export default function Navbar() {
+  const [blogOpen, setBlogOpen] = useState(false);
+  const blogRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (blogRef.current && !blogRef.current.contains(event.target as Node)) {
+        setBlogOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#2A2650] bg-[#0D0B1A]">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <div className="flex h-16 items-center justify-between gap-8">
-
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
@@ -28,7 +50,7 @@ export default function Navbar() {
           </Link>
 
           {/* Nav Links */}
-          <nav className="hidden md:flex items-center">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((item) => (
               <Link
                 key={item.label}
@@ -38,6 +60,46 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Blog Dropdown */}
+            <div className="relative" ref={blogRef}>
+              <button
+                type="button"
+                onClick={() => setBlogOpen((prev) => !prev)}
+                className="inline-flex items-center gap-2 rounded-lg px-3.5 py-1.5 text-[13.5px] text-[#6B6A80] transition-colors hover:bg-[#7F77DD]/10 hover:text-[#EEEDFE]"
+              >
+                Blog
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    blogOpen ? "rotate-180" : ""
+                  }`}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              {blogOpen && (
+                <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#2A2650] bg-[#141125] p-2 shadow-xl shadow-black/30">
+                  {blogLinks.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setBlogOpen(false)}
+                      className="block rounded-xl px-4 py-3 text-sm text-[#B8B6D9] transition-colors hover:bg-[#7F77DD]/10 hover:text-[#EEEDFE]"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Call Now Button */}
@@ -48,7 +110,6 @@ export default function Navbar() {
             <PhoneIcon />
             Call Now: +1 866 896 0447
           </a>
-
         </div>
       </div>
     </header>
