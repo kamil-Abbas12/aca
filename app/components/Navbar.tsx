@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-
+import { useState } from "react";
 // ── SEO: real href values so Google can crawl & index these pages ─────────────
 const navLinks = [
   { label: "About Us", href: "/about" },
@@ -14,23 +13,12 @@ const navLinks = [
 
 const blogLinks = [
   { label: "Blog", href: "/blog" },
-  { label: "Blog Sidebar", href: "/blog/sidebar" },
 ];
 
 export default function Navbar() {
-  const [blogOpen, setBlogOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const blogRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (blogRef.current && !blogRef.current.contains(event.target as Node)) {
-        setBlogOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+ 
 
   return (
     // ── SEO: <header> with role="banner" is a landmark — Googlebot uses it
@@ -65,51 +53,12 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* Blog Dropdown */}
-            <div className="relative" ref={blogRef}>
-              <button
-                type="button"
-                onClick={() => setBlogOpen((prev) => !prev)}
-                aria-expanded={blogOpen}
-                aria-haspopup="true"
-                aria-controls="blog-dropdown"
-                className="inline-flex items-center gap-2 rounded-lg px-3.5 py-1.5 text-[13.5px] text-[#6B6A80] transition-colors hover:bg-[#7F77DD]/10 hover:text-[#EEEDFE]"
-              >
-                Blog
-                <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${blogOpen ? "rotate-180" : ""}`}
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-
-              {blogOpen && (
-                <div
-                  id="blog-dropdown"
-                  role="menu"
-                  className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#2A2650] bg-[#141125] p-2 shadow-xl shadow-black/30"
-                >
-                  {blogLinks.map((item) => (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      role="menuitem"
-                      onClick={() => setBlogOpen(false)}
-                      className="block rounded-xl px-4 py-3 text-sm text-[#B8B6D9] transition-colors hover:bg-[#7F77DD]/10 hover:text-[#EEEDFE]"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+          <Link
+  href="/blog"
+  className="rounded-lg px-3.5 py-1.5 text-[13.5px] text-[#6B6A80] transition-colors hover:bg-[#7F77DD]/10 hover:text-[#EEEDFE]"
+>
+  Blog
+</Link>
           </nav>
 
           {/* Call Now — <a href="tel:"> is crawlable & adds to LocalBusiness schema */}

@@ -1,65 +1,22 @@
 // app/sitemap.ts
-// Next.js App Router auto-generates /sitemap.xml from this file.
-// Add every public URL you want Google to crawl.
-
 import { MetadataRoute } from "next";
+import { BLOGS } from "@/app/data/blogs";
 
 const BASE_URL = "https://affordablecareact.topdoglead.com";
 
-// ── Static blog slugs ──────────────────────────────────────────────────────────
-// Replace / extend this list as you publish more posts.
-const blogSlugs = [
-  "understanding-the-affordable-care-act",
-  // "how-to-choose-a-health-plan",
-  // "aca-open-enrollment-2025",
-  // "short-term-health-insurance-explained",
-  // "medicaid-vs-marketplace-plans",
-];
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  // ── Static pages ─────────────────────────────────────────────────────────────
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/privacy-policy`,
-      lastModified: now,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms`,
-      lastModified: now,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/licensing`,
-      lastModified: now,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: BASE_URL, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
+    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE_URL}/partners`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
   ];
 
-  // ── Blog post pages ───────────────────────────────────────────────────────────
-  const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
+  const blogPages: MetadataRoute.Sitemap = BLOGS.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.7,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  return [...staticPages, ...blogPages];
 }

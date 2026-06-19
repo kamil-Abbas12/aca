@@ -1,20 +1,32 @@
 import { BLOGS, ContentBlock } from "@/app/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
+const BASE_URL = "https://affordablecareact.topdoglead.com";
 
 export async function generateMetadata({ params }: any) {
   const { slug } = await params;
   const post = BLOGS.find((p) => p.slug === slug);
 
-  if (!post) {
-    return { title: "Blog | Healthcare Insights" };
-  }
+  if (!post) return { title: "Blog | Top Dog Leads LLC" };
+
+  const description = post.excerpt || post.caption || "Health insurance tips and insights";
 
   return {
-    title: `${post.title} | Healthcare Insights`,
-    description: post.excerpt || post.caption || "Health insurance tips and insights",
+    title: `${post.title} | Top Dog Leads LLC`,
+    description,
+    alternates: { canonical: `${BASE_URL}/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description,
+      url: `${BASE_URL}/blog/${post.slug}`,
+      images: [{ url: `${BASE_URL}${post.image}`, width: 1200, height: 630 }],
+      publishedTime: post.date,
+    },
+    twitter: { card: "summary_large_image", title: post.title, description },
   };
 }
+
 
 function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
   switch (block.type) {
@@ -142,7 +154,18 @@ export default async function BlogDetailPage({
       </main>
     );
   }
-
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description: post.excerpt || post.caption,
+  image: `${BASE_URL}${post.image}`,
+  datePublished: post.date,
+  author: { "@type": "Organization", name: "Top Dog Leads LLC" },
+  publisher: { "@type": "Organization", name: "Top Dog Leads LLC" },
+  mainEntityOfPage: `${BASE_URL}/blog/${post.slug}`,
+};
+// <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
   return (
     <main className="min-h-screen bg-[#f7efe6]" role="main">
       <article className="mx-auto max-w-3xl px-4 py-20">
@@ -200,16 +223,9 @@ export default async function BlogDetailPage({
             aria-label="Go to blog grid page"
             className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/10 hover:shadow-md transition"
           >
-            View Blog Grid
+            View Blogs
           </Link>
 
-          <Link
-            href="/blog/sidebar"
-            aria-label="Go to blog sidebar page"
-            className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0b2b55] ring-1 ring-black/10 hover:shadow-md transition"
-          >
-            View Blog Sidebar
-          </Link>
         </nav>
 
       </article>

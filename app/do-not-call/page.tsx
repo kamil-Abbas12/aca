@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default function DoNotCallPage() {
   return (
     <>
-      <Navbar />
       <main id="main-content">
 
         {/* Hero */}
@@ -128,7 +127,6 @@ export default function DoNotCallPage() {
         </section>
 
       </main>
-      <Footer />
     </>
   );
 }

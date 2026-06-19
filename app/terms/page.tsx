@@ -81,7 +81,6 @@ const sections = [
 export default function TermsPage() {
   return (
     <>
-      <Navbar />
       <main id="main-content">
 
         {/* Hero */}
@@ -95,8 +94,8 @@ export default function TermsPage() {
               Terms &amp; Conditions
             </h1>
             <p className="text-[#6B6A80]">
-              <strong className="text-[#AFA9EC]">Effective date:</strong> January 1, 2025 &nbsp;·&nbsp;
-              <strong className="text-[#AFA9EC]">Last updated:</strong> June 1, 2026
+              <strong className="text-[#AFA9EC]">Effective date:</strong> June 7, 2026 &nbsp;·&nbsp;
+              <strong className="text-[#AFA9EC]">Last updated:</strong> June 18, 2026
             </p>
           </div>
         </section>
@@ -137,7 +136,6 @@ export default function TermsPage() {
         </section>
 
       </main>
-      <Footer />
     </>
   );
 }

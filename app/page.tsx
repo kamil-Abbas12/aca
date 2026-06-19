@@ -44,7 +44,6 @@ export default function Home() {
         Skip to main content
       </a>
 
-      <Navbar />
 
       {/* Wrap page body in <main> with a unique id — critical for semantic HTML */}
       <main id="main-content">
@@ -60,7 +59,6 @@ export default function Home() {
         <Blog />
       </main>
 
-      <Footer />
 
       {/* ── JSON-LD: FAQPage (great for rich results / "People also ask") ──── */}
       <script
