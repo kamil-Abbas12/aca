@@ -1,4 +1,5 @@
 // app/api/contact/route.ts
+import getClientPromise from "@/app/lib/mongodb";
 import clientPromise from "@/app/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
@@ -23,7 +24,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 1. Save the lead to MongoDB
-    const client = await clientPromise;
+const client = await getClientPromise(); // after
     const db = client.db("topdogleads");
     const result = await db.collection("contact_submissions").insertOne({
       name,
