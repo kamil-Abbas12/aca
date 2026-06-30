@@ -22,11 +22,162 @@ export interface BlogPost {
 
 export const BLOGS: BlogPost[] = [
   {
+    slug: "aca-essential-health-benefits-no-deductible",
+    title:
+      "The Hidden Perks of ACA Plans: 10 Essential Health Benefits You Don't Pay a Deductible For",
+    excerpt:
+      "Most people assume they're on their own until they hit their deductible. But under the ACA, a whole category of preventive and wellness services is covered at 100% - no deductible, no copay, no coinsurance.",
+    caption:
+      "A major subset of ACA-mandated services bypasses your deductible entirely. Here are the 10 high-value benefits you're already paying for every month and might not be using.",
+    date: "2026-06-29",
+    category: "Health Insurance",
+    readTime: "5 min read",
+    image: "/aca-essential-health-benefits-no-deductible.webp",
+    content: [
+      {
+        type: "paragraph",
+        text: "Most people look at health insurance through a single lens: How high is my deductible, and how much do I have to pay out of pocket before this thing actually kicks in?",
+      },
+      {
+        type: "paragraph",
+        text: "If you have an Affordable Care Act (ACA) plan - whether you bought it on the federal marketplace, a state exchange, or get it through an employer - it's easy to assume you're totally on your own for minor doctor visits until you smash through that deductible.",
+      },
+      {
+        type: "paragraph",
+        text: "But there is a massive loophole built into the law that most people miss. Under the ACA, all compliant plans are legally required to cover a broad suite of Essential Health Benefits. Even better, a major subset of these services - specifically focusing on preventive and wellness care - bypasses your deductible entirely. As long as you see an in-network doctor, you pay exactly $0 out of pocket. No deductible, no copay, no coinsurance.",
+      },
+      {
+        type: "paragraph",
+        text: "If you aren't booking these 10 high-value services, you are essentially leaving free healthcare on the table.",
+      },
+      {
+        type: "heading",
+        text: "1. Your Annual Wellness Exam",
+      },
+      {
+        type: "paragraph",
+        text: "Think of this as your yearly physical baseline. You can walk into an in-network primary care doctor once a year to get your vitals checked, discuss your overall health history, and plot out future screenings. The office visit itself is entirely free.",
+      },
+      {
+        type: "heading",
+        text: "2. Routine Immunizations & Vaccines",
+      },
+      {
+        type: "paragraph",
+        text: "Keeping up with your shots shouldn't drain your bank account. Your ACA plan covers standard immunizations at 100%. This includes your annual flu shot, COVID-19 vaccines, Tdap (tetanus, diphtheria, pertussis), and shingles or pneumonia vaccines if you meet the age requirements.",
+      },
+      {
+        type: "heading",
+        text: "3. Blood Pressure & Cholesterol Screenings",
+      },
+      {
+        type: "paragraph",
+        text: "Cardiovascular issues are often silent. Because managing them early prevents catastrophic medical events later, blood pressure checks and cholesterol blood panels are covered without touching your deductible.",
+      },
+      {
+        type: "heading",
+        text: "4. Mental Health & Depression Screenings",
+      },
+      {
+        type: "paragraph",
+        text: "Behavioral health is just as critical as physical health. While ongoing therapy sessions typically involve a copay or count toward your deductible, the initial screenings for depression and behavioral risks are covered completely. Your primary doctor can run these evaluations during your annual visit for free.",
+      },
+      {
+        type: "heading",
+        text: "5. Type 2 Diabetes Screenings",
+      },
+      {
+        type: "paragraph",
+        text: "If you fall into specific risk categories - like being overweight or having a family history of diabetes - your plan covers regular blood glucose or A1C screenings. Catching pre-diabetes early can save you thousands in future maintenance care.",
+      },
+      {
+        type: "heading",
+        text: "6. Cancer Screenings (Based on Age and Risk)",
+      },
+      {
+        type: "paragraph",
+        text: "Routine cancer screenings are covered at 100% because early detection saves lives. Depending on your age and risk factors, this includes:",
+      },
+      {
+        type: "bullets",
+        items: [
+          { bold: "Mammograms", text: " for breast cancer screening." },
+          { bold: "Pap smears", text: " for cervical cancer screening." },
+          {
+            bold: "Colonoscopies or home screening kits",
+            text: " for colorectal cancer.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: "7. Complete Birth Control & Contraception",
+      },
+      {
+        type: "paragraph",
+        text: "For women, ACA plans must cover all FDA-approved contraceptive methods prescribed by a doctor. This includes oral pills, barrier methods, and even long-acting devices like IUDs or implants, along with the medical procedure required to insert and remove them.",
+      },
+      {
+        type: "heading",
+        text: "8. Prenatal & Maternal Care Basics",
+      },
+      {
+        type: "paragraph",
+        text: "If you are expecting, your routine prenatal visits - including essential blood tests, gestational diabetes screenings, and Rh incompatibility screenings - are fully covered from day one. Your plan will also pay for a breast pump and breastfeeding counseling sessions post-birth.",
+      },
+      {
+        type: "heading",
+        text: "9. Diet & Obesity Counseling",
+      },
+      {
+        type: "paragraph",
+        text: "If a doctor determines that your body mass index (BMI) puts you at risk for chronic illness, your plan covers nutritional counseling. You can work with a professional to develop a healthier meal and lifestyle plan without receiving a surprise bill.",
+      },
+      {
+        type: "heading",
+        text: "10. Pediatric Dental & Vision Checks",
+      },
+      {
+        type: "paragraph",
+        text: "While adult dental and vision aren't standard mandates on basic medical plans, pediatric services are part of the core essential benefits. For children under 19, routine eye exams, vision screenings, dental cleanings, and even fluoride treatments are covered to ensure they grow up healthy.",
+      },
+      {
+        type: "heading",
+        text: "The Fine Print: How to Keep It Free",
+      },
+      {
+        type: "paragraph",
+        text: "To make sure you don't accidentally trigger a bill, keep two golden rules in mind:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Stay In-Network:",
+            text: " The ACA only guarantees zero-cost care if you use providers, labs, and clinics that are actively contracted with your specific insurance network.",
+          },
+          {
+            bold: 'Watch for "Diagnostic" Shifts:',
+            text: " If you go in for a free screening and your doctor finds something that requires further testing or treatment, the appointment can shift from \"preventive\" to \"diagnostic.\" Any follow-up tests or treatments will start counting toward your deductible.",
+          },
+        ],
+      },
+      {
+        type: "pro_tip",
+        text: 'Tell your doctor up front that you\'re there for a "preventive" annual visit. If a separate concern comes up, ask whether it will be billed diagnostically before agreeing to additional tests in the same visit.',
+      },
+      {
+        type: "closing",
+        text: "The next time you look at your health insurance card, don't just focus on the scary deductible number. Flip it over, log into your member portal, and schedule that free annual checkup. It's a benefit you're already paying for every month - you might as well use it.",
+      },
+    ],
+  },
+  {
   slug: "how-aca-plans-handle-therapy-and-treatment",
   title:
     "The Reality of Mental Health Coverage: How ACA Plans Handle Therapy and Treatment",
   excerpt:
-    "Therapy isn't an optional add-on under the ACA — it's an Essential Health Benefit. But parity rules, deductibles, and network gaps still shape what you actually pay for mental health and substance use treatment.",
+    "Therapy isn't an optional add-on under the ACA - it's an Essential Health Benefit. But parity rules, deductibles, and network gaps still shape what you actually pay for mental health and substance use treatment.",
   caption:
     "Mental health care is legally guaranteed under ACA plans, but networks, deductibles, and medical necessity reviews still decide what you pay out of pocket. Here's how coverage really works in practice.",
   date: "2026-06-24",
@@ -150,7 +301,7 @@ export const BLOGS: BlogPost[] = [
     slug: "understanding-the-affordable-care-act",
     title: "Understanding the Affordable Care Act: A Beginner's Guide",
     excerpt:
-      "Navigating health insurance can feel overwhelming. This guide breaks down the ACA in plain language — from metal tiers and subsidies to enrollment windows.",
+      "Navigating health insurance can feel overwhelming. This guide breaks down the ACA in plain language - from metal tiers and subsidies to enrollment windows.",
     caption:
       "Health insurance doesn't have to be confusing. Here's everything a beginner needs to know about the ACA, Marketplace plans, and how to get financial help.",
     date: "2026-06-10",
