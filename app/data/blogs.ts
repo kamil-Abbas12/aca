@@ -21,6 +21,197 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+ {
+    slug: "aca-subsidies-multigenerational-households",
+    title: "How ACA Subsidies Work for MultiGenerational Households",
+    excerpt:
+      "Living under one roof with multiple generations is a beautiful thing, but when it comes to ACA subsidies, the government's definition of 'household' probably doesn't match who sits at your dinner table.",
+    caption:
+      "A single multigenerational home can actually contain two or three separate ACA households. Here's how to untangle tax pods, income counting, and the 2026 subsidy cliff.",
+    date: "2026-07-09",
+    category: "Family Plans",
+    readTime: "6 min read",
+    image: "/multigenerational-household-aca-subsidies.webp",
+    content: [
+      {
+        type: "paragraph",
+        text: "Living under one roof with multiple generations - grandparents, adult kids, and grandkids - is a beautiful thing. It means shared meals, built-in babysitting, and closer family bonds. But when it comes to navigating the administrative world of health insurance, things get complicated quickly.",
+      },
+      {
+        type: "paragraph",
+        text: "If your multi-generational household relies on the Affordable Care Act (ACA) Marketplace for health insurance, you might be wondering how premium subsidies are calculated.",
+      },
+      {
+        type: "paragraph",
+        text: "The short answer? The government's definition of a \"household\" probably does not match who sits at your dinner table.",
+      },
+      {
+        type: "paragraph",
+        text: "Understanding how the rule changes in 2026 affect your family can save you thousands of dollars in premiums or prevent a surprise bill at tax time.",
+      },
+      {
+        type: "heading",
+        text: "1. The Golden Rule: Tax Pods, Not Roofs",
+      },
+      {
+        type: "paragraph",
+        text: "When you apply for an ACA subsidy (the tax credit that lowers your monthly premium), the Marketplace asks for your \"household size\" and \"household income\".",
+      },
+      {
+        type: "paragraph",
+        text: "In a multi-generational home, it's easy to assume you should count everyone living in the house. But the IRS defines a household by tax relationships, not physical addresses.",
+      },
+      {
+        type: "paragraph",
+        text: "Think of your home as containing separate \"tax pods.\" A single house might actually contain two or three distinct ACA households.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Who is always in your ACA household:",
+            text: " You, your legal spouse, and any children or relatives you claim as tax dependents.",
+          },
+          {
+            bold: "Who is usually NOT in your ACA household:",
+            text: " Your independent adult children (who file their own taxes) and your aging parents (unless you legally claim them as dependents).",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If people in your house file separate tax returns, they must apply for their own separate ACA plans and subsidies.",
+      },
+      {
+        type: "heading",
+        text: "2. Income Tying: Be Careful Whose Income You Count",
+      },
+      {
+        type: "paragraph",
+        text: "A common mistake multi-generational families make is adding up everyone's paychecks on one application. Doing this can artificially inflate your household income, making you look \"too wealthy\" for a subsidy and causing you to lose out on financial help.",
+      },
+      {
+        type: "pro_tip",
+        text: "Rule of Thumb: You only include an individual's income on your application if they are included in your tax household.",
+      },
+      {
+        type: "heading",
+        text: "Scenario: The Three-Generation Home",
+      },
+      {
+        type: "paragraph",
+        text: "Imagine a home with three generations: Grandma Clara (on Social Security), her daughter Sarah (employed), and Sarah's 24-year-old son, Leo (working a retail job).",
+      },
+      {
+        type: "table",
+        headers: ["Family Member", "Tax Status", "ACA Household Grouping"],
+        rows: [
+          [
+            "Sarah (Mom)",
+            "Files as Head of Household; claims Grandma Clara as a dependent",
+            "Household 1: Sarah + Grandma Clara. Sarah's application will include her income and Clara's countable Social Security.",
+          ],
+          [
+            "Grandma Clara",
+            "Claimed as a tax dependent by Sarah",
+            "Covered under Household 1's application.",
+          ],
+          [
+            "Leo (Adult Son)",
+            "Files his own independent taxes",
+            "Household 2: Leo applies completely on his own. His subsidy is based solely on his retail income.",
+          ],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "By filing this way, Leo gets a subsidy tailored to a young adult's budget, and Sarah gets a subsidy adjusted for a two-person household. If they had grouped everyone together, their combined income might have pushed them past the subsidy threshold.",
+      },
+      {
+        type: "heading",
+        text: "3. The 2026 \"Subsidy Cliff\" is Back",
+      },
+      {
+        type: "paragraph",
+        text: "Filing correctly matters now more than ever. From 2021 through 2025, temporary federal rules expanded ACA subsidies, ensuring that nobody had to pay more than 8.5% of their income for a benchmark insurance plan, regardless of how much they made.",
+      },
+      {
+        type: "paragraph",
+        text: "As of January 1, 2026, those enhanced subsidies have expired.",
+      },
+      {
+        type: "paragraph",
+        text: "The hard income cap - often called the \"subsidy cliff\" - has returned. If your tax household's income crosses 400% of the Federal Poverty Level (FPL) by even a single dollar, your subsidy drops to zero.",
+      },
+      {
+        type: "paragraph",
+        text: "For reference, 400% of the FPL in 2026 looks roughly like this:",
+      },
+      {
+        type: "bullets",
+        items: [
+          { bold: "1 Person:", text: " Mid-$60,000s" },
+          { bold: "2 People:", text: " ~$86,560" },
+          { bold: "3 People:", text: " ~$109,280" },
+          { bold: "4 People:", text: " Mid-$130,000s" },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Because the cliff is back, mistakenly combining independent adult family members into one ACA application could push your \"household\" over that 400% FPL mark, completely stripping the family of financial assistance.",
+      },
+      {
+        type: "heading",
+        text: "4. What About Medicaid and Medicare?",
+      },
+      {
+        type: "paragraph",
+        text: "Multi-generational households often have a mix of insurance types, which requires some strategy:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "The Seniors:",
+            text: " If grandparents qualify for Medicare, they cannot use ACA subsidies. However, if they live with you and you claim them as dependents, their presence still increases your household size (which lowers your FPL percentage and can increase your subsidy), but you just won't select them for health coverage on the plan.",
+          },
+          {
+            bold: "The Kids:",
+            text: " In many states, lower-income children and young adults may automatically qualify for Medicaid or the Children's Health Insurance Program (CHIP). An application can result in the adults getting an ACA subsidy while the kids get Medicaid - and that's perfectly normal.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: "Simple Steps to Apply Correctly",
+      },
+      {
+        type: "paragraph",
+        text: "If you're getting ready to sit down and look at Marketplace options, take these steps first:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Count the tax returns:",
+            text: " Determine exactly how many separate federal tax returns will be filed by the people living in your house. That is the number of ACA applications you will likely need to fill out.",
+          },
+          {
+            bold: "Separate the applications, link the address:",
+            text: " When applying on HealthCare.gov or your state exchange, you can create separate applications but list the same physical address. The system is built to handle this.",
+          },
+          {
+            bold: "Consult a pro if you're unsure:",
+            text: " Claiming an adult relative as a dependent has strict IRS guidelines regarding how much financial support you provide them. If you aren't sure whether Grandma or an adult child count as a dependent, talk to a tax professional before submitting your health insurance application.",
+          },
+        ],
+      },
+      {
+        type: "closing",
+        text: "Living together saves money and keeps family close. By taking a few minutes to untangle your tax households, you can make sure your health insurance costs stay just as manageable.",
+      },
+    ],
+  },
   {
     slug: "aca-essential-health-benefits-no-deductible",
     title:
