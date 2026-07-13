@@ -135,7 +135,8 @@ export default function RootLayout({
             }),
           }}
         />
-
+<script src="https://analytics.ahrefs.com/analytics.js" 
+data-key="JkhARxLMNh+CptEmB0KYzw" async></script>
         {/* ── JSON-LD: LocalBusiness / InsuranceAgency ────────────────────── */}
         <script
           type="application/ld+json"
