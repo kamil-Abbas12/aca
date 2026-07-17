@@ -21,6 +21,171 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+  {
+  slug: "aca-preventive-care-benefits",
+  title: "ACA Preventive Care Benefits",
+  excerpt:
+    "Thanks to the Affordable Care Act, a huge menu of routine health services is completely free — no copay, no coinsurance, and you don't have to hit your deductible first. Here's what's covered and how to avoid getting billed by accident.",
+  caption:
+    "You're already paying your premium every month — you might as well use the $0 preventive benefits built into your plan. Here's what's covered and the fine print that can trigger a surprise bill.",
+  date: "2026-07-17",
+  category: "Health Insurance",
+  readTime: "6 min read",
+  image: "/aca-preventive-care-benefits.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "We've all been there: you open an insurance statement or a medical bill, squint at the numbers, and feel your blood pressure instantly spike. Healthcare in America is famously confusing, and most of us assume that stepping into a doctor's office automatically means opening our wallets.",
+    },
+    {
+      type: "paragraph",
+      text: "But there is a massive exception to this rule, and it's sitting right inside your health plan.",
+    },
+    {
+      type: "paragraph",
+      text: "Thanks to the Affordable Care Act (ACA), a huge menu of routine health services is completely, 100% free. No copays. No coinsurance. And you don't have to hit your terrifyingly high deductible first. It's called ACA Preventive Care Benefits, and if you aren't using them, you're essentially leaving free money and a healthier future on the table.",
+    },
+    {
+      type: "paragraph",
+      text: "Here is a plain-English guide to what this actually means, what's covered, and how to avoid getting billed by accident.",
+    },
+
+    {
+      type: "heading",
+      text: 'What Does "Preventive" Actually Mean?',
+    },
+    {
+      type: "paragraph",
+      text: "Insurance companies look at healthcare through two different lenses: Preventive and Diagnostic.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Preventive care",
+          text: " is what you get when you are feeling perfectly fine. It's the stuff meant to prevent an illness or catch a problem early before you ever feel symptoms (like a routine mammogram or a blood pressure check). Under the ACA, this is the stuff that is free.",
+        },
+        {
+          bold: "Diagnostic care",
+          text: ' is what happens when you go to the doctor because something already hurts, feels weird, or went wrong. If you tell your doctor, "Hey, my shoulder has been clicking and it hurts to lift it," that visit and any subsequent X-rays are diagnostic, meaning your normal deductibles and copays apply.',
+        },
+      ],
+    },
+    {
+      type: "pro_tip",
+      text: "The golden rule: Preventive care keeps you from getting sick. Diagnostic care treats you because you are sick.",
+    },
+
+    {
+      type: "heading",
+      text: "What's Covered Under the $0 Copay Rule?",
+    },
+    {
+      type: "paragraph",
+      text: "The list of free preventive services is surprisingly long and gets updated regularly by medical experts to reflect new health guidelines. The benefits generally break down into three main categories:",
+    },
+
+    {
+      type: "heading",
+      text: "1. For All Adults",
+    },
+    {
+      type: "paragraph",
+      text: "Every adult with a standard, non-grandfathered health plan has access to a baseline of care at no out-of-pocket cost:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Annual Wellness Exam:",
+          text: " Your yearly physical.",
+        },
+        {
+          bold: "Screenings:",
+          text: " Free checks for high blood pressure, type 2 diabetes, high cholesterol, and certain types of cancer (like colonoscopies).",
+        },
+        {
+          bold: "Immunizations:",
+          text: " Routine vaccines including the flu shot, tetanus boosters, shingles, RSV, and COVID-19 vaccines.",
+        },
+        {
+          bold: "Mental Health:",
+          text: " Screenings for depression and substance use.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "2. Specifically for Women",
+    },
+    {
+      type: "paragraph",
+      text: "Women have access to a distinct set of free services tailored to reproductive and long-term health:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Well-Woman Visits:",
+          text: " Annual gynecological exams.",
+        },
+        {
+          bold: "Contraception:",
+          text: " FDA-approved birth control methods, including oral pills, IUDs, and implants, along with the counseling required to get them.",
+        },
+        {
+          bold: "Maternity and Postpartum Care:",
+          text: " Screenings for gestational diabetes, breastfeeding support, and counseling.",
+        },
+        {
+          bold: "Expanded Cancer Screening & Support:",
+          text: ' If an initial screening mammogram shows a potential issue, expanded guidelines now require plans to cover the necessary follow-up imaging (like an ultrasound or MRI) and pathology at $0 out-of-pocket. Plans also cover "patient navigation services" to help guide you through the stress of follow-up care.',
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "3. For Children",
+    },
+    {
+      type: "paragraph",
+      text: "From newborns to teenagers, kids get free well-child visits, developmental screenings, vision and hearing tests, and all standard childhood vaccinations.",
+    },
+
+    {
+      type: "heading",
+      text: "How to Avoid Getting a Sneaky Bill",
+    },
+    {
+      type: "paragraph",
+      text: "Even though these services are legally mandated to be free, people still get accidental bills all the time. This usually happens because of a minor administrative oversight. Here is how you can protect your wallet:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Stay In-Network (Crucial First Step):",
+          text: " The ACA only guarantees $0 preventive care if you use a doctor, clinic, or lab that is in your insurance network. If you go out-of-network, you will likely get stuck with the bill. Always double-check your insurer's directory before booking.",
+        },
+        {
+          bold: "Use the Magic Words When Booking (Setting Expectations):",
+          text: ' When you call to schedule, explicitly state: "I am booking my annual preventive wellness exam." Do not call it a "check-up" or "problem visit." This ensures the clinic logs the appointment with the correct billing code.',
+        },
+        {
+          bold: "Keep the Conversation Preventive (During the Appointment):",
+          text: " If you go in for your free annual physical, but spend 20 minutes talking to your doctor about chronic back pain or a weird rash you've been having, the doctor is required to log those issues. The clinic may then split the bill — charging $0 for the physical, but coding a separate diagnostic charge for the new medical advice. If you have a specific ailment, it's often cheaper to book a separate visit for it.",
+        },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Preventive care isn't just about saving money on a doctor's visit today; a typical family utilizing these recommended services saves over $4,000 annually in avoided out-of-pocket medical costs down the road. More importantly, catching a condition like high blood pressure or early-stage cancer before it damages your body changes your entire quality of life. You pay your health insurance premium every single month. You might as well make the system work for you for a change. Call your doctor, get your free annual physical on the books, and take advantage of the benefits you're already paying for.",
+    },
+  ],
+},
  {
     slug: "aca-subsidies-multigenerational-households",
     title: "How ACA Subsidies Work for MultiGenerational Households",
