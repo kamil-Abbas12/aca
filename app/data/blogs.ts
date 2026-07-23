@@ -22,6 +22,183 @@ export interface BlogPost {
 
 export const BLOGS: BlogPost[] = [
   {
+  slug: "aca-myths-vs-facts",
+  title: "ACA Myths vs. Facts",
+  excerpt:
+    "Between the endless acronyms, annual rule tweaks, and constant noise online, figuring out how the ACA actually impacts you can turn into a headache fast. Here's the reality behind the five most common myths.",
+  caption:
+    "Almost nobody enjoys talking about health insurance, but the basics are more straightforward than they sound once you filter out the common misconceptions. Let's separate the myths from reality.",
+  date: "2026-07-23",
+  category: "Health Insurance",
+  readTime: "5 min read",
+  image: "/aca-myths-vs-facts.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "Let's be honest: almost nobody enjoys talking about health insurance. Between the endless acronyms, annual rule tweaks, and constant noise online, trying to figure out how the Affordable Care Act actually impacts you can turn into a headache fast. The good news? The basics are a lot more straightforward than they sound once you filter out the common misconceptions.",
+    },
+    {
+      type: "paragraph",
+      text: "Let's separate the most common myths from reality.",
+    },
+
+    {
+      type: "heading",
+      text: 'The "Pre-Existing Condition" Misunderstanding',
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Myth:",
+          text: " Insurance companies can still deny you coverage or hike your rates if you've been sick before.",
+        },
+        {
+          bold: "Fact:",
+          text: " The ACA made pre-existing condition discrimination illegal for standard plans.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Before the ACA passed, if you had asthma, diabetes, high blood pressure, or even a history of minor surgeries, an insurer could flat-out deny you coverage or charge you astronomical premiums.",
+    },
+    {
+      type: "paragraph",
+      text: "Under the law, no Marketplace plan can deny you coverage, drop you, or charge you more simply because of a medical condition you had before your coverage started. The only factors that can legally influence your premium are your age, location, tobacco use, and plan tier.",
+    },
+    {
+      type: "pro_tip",
+      text: "Note: This protection applies to ACA-compliant plans. Short-term health insurance plans or indemnity plans don't have to play by these rules, which is why reading the fine print on non-Marketplace plans matters.",
+    },
+
+    {
+      type: "heading",
+      text: "The Subsidy Threshold",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Myth:",
+          text: " If you make a decent income, you won't qualify for any financial help.",
+        },
+        {
+          bold: "Fact:",
+          text: " Millions of middle-income families qualify for subsidies that significantly drop their monthly payments.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "A lot of people skip browsing HealthCare.gov because they assume their paycheck disqualifies them from tax credits.",
+    },
+    {
+      type: "paragraph",
+      text: "While subsidies used to strictly cap at 400% of the federal poverty level, expanded tax credits have broadened eligibility. These adjustments ensure that no household buying through the Marketplace pays more than a set percentage of their income toward a benchmark plan. Even if you consider yourself \"middle class,\" you might be surprised by how much savings are available to bring down your monthly premium.",
+    },
+
+    {
+      type: "heading",
+      text: "The Penalty Confusion",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Myth:",
+          text: " You'll face a massive federal tax fine if you don't have health insurance this year.",
+        },
+        {
+          bold: "Fact:",
+          text: " The federal penalty for not having insurance was reduced to $0 back in 2019.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: 'When the law was first enacted, the "individual mandate" meant you paid a tax penalty if you went uninsured without an exemption. Congress reduced the federal tax penalty to zero starting in the 2019 plan year.',
+    },
+    {
+      type: "paragraph",
+      text: "However, there is a catch depending on where you live:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          text: "A handful of states — including California, Massachusetts, New Jersey, Rhode Island, and Washington D.C. — enact their own state-level mandates and issue state tax penalties if you go uninsured.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "So, while Uncle Sam won't fine you on your federal tax return, your state tax authority might, depending on your zip code.",
+    },
+
+    {
+      type: "heading",
+      text: '"You Can Only Sign Up in November"',
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Myth:",
+          text: " If you miss Open Enrollment, you're completely out of luck until next year.",
+        },
+        {
+          bold: "Fact:",
+          text: ' "Qualifying Life Events" unlock Special Enrollment Periods year-round.',
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Open Enrollment usually runs from November to early January, but life doesn't always wait for a calendar window. If you experience major life changes, you qualify for a 60-day window to enroll in an ACA plan outside the standard period.",
+    },
+    {
+      type: "paragraph",
+      text: "Common Qualifying Life Events:",
+    },
+    {
+      type: "bullets",
+      items: [
+        { text: "Losing existing coverage (job loss, aging off a parent's plan at 26)" },
+        { text: "Getting married or divorced" },
+        { text: "Having a baby, adopting, or placing a child in foster care" },
+        { text: "Moving to a new zip code or county that offers different plans" },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "If any of these apply, you don't have to wait until November to secure coverage.",
+    },
+
+    {
+      type: "heading",
+      text: "Key Takeaways",
+    },
+    {
+      type: "paragraph",
+      text: "Understanding how the ACA actually works comes down to knowing your rights:",
+    },
+    {
+      type: "bullets",
+      items: [
+        { text: "Pre-existing conditions cannot be used to block you from ACA-compliant coverage." },
+        { text: "Subsidies extend higher up the income scale than most people expect." },
+        { text: "Life changes give you options to enroll outside the standard winter window." },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Having clear facts makes navigating your healthcare options far less stressful.",
+    },
+  ],
+},
+  {
   slug: "aca-preventive-care-benefits",
   title: "ACA Preventive Care Benefits",
   excerpt:
