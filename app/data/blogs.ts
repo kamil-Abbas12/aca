@@ -22,6 +22,149 @@ export interface BlogPost {
 
 export const BLOGS: BlogPost[] = [
   {
+  slug: "short-term-health-insurance-vs-aca-coverage",
+  title: "Short-Term Health Insurance vs. ACA Coverage: What's the Real Difference?",
+  excerpt:
+    "Short-term plans look like a steal compared to traditional ACA coverage — but there's a reason for that price gap. Here's what you're actually paying for, and what happens if you need to use the plan.",
+  caption:
+    "Cheap and fast vs. comprehensive and protected. Before you sign up for a bargain short-term policy, know exactly what it won't cover.",
+  date: "2026-07-29",
+  category: "Health Insurance",
+  readTime: "5 min read",
+  image: "/short-term-health-insurance-vs-aca-coverage.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "If you're shopping for health insurance on your own, it doesn't take long to realize how confusing the options are. You click on a few sites looking for a quick quote, and suddenly your phone is ringing off the hook with offers for plans that sound incredibly cheap.",
+    },
+    {
+      type: "paragraph",
+      text: "Most of those bottom-dollar options fall into the category of Short-Term Health Insurance. On paper, they look like a steal compared to traditional ACA (Affordable Care Act) plans. But there's a reason for that price gap.",
+    },
+    {
+      type: "paragraph",
+      text: "Choosing between the two comes down to understanding what you're actually paying for and what happens if you actually need to use the plan.",
+    },
+
+    {
+      type: "heading",
+      text: "What Is an ACA-Compliant Plan?",
+    },
+    {
+      type: "paragraph",
+      text: 'An ACA plan (often called "Obamacare" or Marketplace insurance) is comprehensive health coverage. Federal law requires these plans to cover a core set of 10 essential health benefits, which include:',
+    },
+    {
+      type: "bullets",
+      items: [
+        { text: "Emergency services and hospitalization" },
+        { text: "Maternity and newborn care" },
+        { text: "Mental health and substance abuse treatment" },
+        { text: "Prescription drugs" },
+        { text: "Preventive care (like annual checkups and screenings) at $0 out-of-pocket" },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The Big Advantage: ACA plans cannot turn you down or charge you more for pre-existing conditions.",
+    },
+    {
+      type: "paragraph",
+      text: "Whether you have diabetes, a history of cancer, or ongoing prescriptions, an ACA plan is legally required to cover you. Plus, if your income qualifies, government subsidies (income-based tax credits) can drop your monthly premium drastically — sometimes down to $0 a month.",
+    },
+    {
+      type: "pro_tip",
+      text: "The Trade-Off: If you don't qualify for significant subsidies, full-price ACA plans can carry higher monthly premiums and hefty deductibles. You also generally have to enroll during the annual Open Enrollment Period unless you qualify for a Special Enrollment Period (like losing a job or getting married).",
+    },
+
+    {
+      type: "heading",
+      text: "What Is Short-Term Health Insurance?",
+    },
+    {
+      type: "paragraph",
+      text: "Short-term insurance is designed as a temporary safety net — a quick bridge to protect you against catastrophic medical bills if you have a short gap between major medical plans. Under federal guidelines, these policies are strictly limited to initial terms of up to 3 months, with a maximum limit of 4 months total including extensions.",
+    },
+    {
+      type: "paragraph",
+      text: "The Big Advantage: It's cheap and fast. Premiums are often a fraction of an unsubsidized ACA plan, and you can apply any day of the year with coverage starting as early as the next day.",
+    },
+    {
+      type: "paragraph",
+      text: "The Trade-Off: Short-term plans are not required to follow ACA rules. That means:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Pre-existing conditions aren't covered:",
+          text: " If you have an existing health issue, the insurer can deny your application or refuse to pay for treatments related to it.",
+        },
+        {
+          bold: "Essential benefits can be excluded:",
+          text: " Most short-term plans don't cover maternity care, mental health, or routine prescriptions.",
+        },
+        {
+          bold: "Caps on payouts:",
+          text: " Many policies place strict annual or lifetime caps on what the insurance company will pay out.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Side-by-Side Comparison",
+    },
+    {
+      type: "table",
+      headers: ["Feature", "ACA-Compliant Plan", "Short-Term Insurance"],
+      rows: [
+        ["Pre-Existing Conditions", "Always covered", "Denied or excluded"],
+        ["Preventive Care", "Covered 100% free", "Rarely covered"],
+        ["Prescription Drugs", "Covered", "Very limited or excluded"],
+        ["When You Can Enroll", "Open Enrollment or SEP", "Anytime, year-round"],
+        ["Government Subsidies", "Available based on income", "Not available"],
+        ["Maximum Duration", "Ongoing (12-month terms)", "Max 4 months total"],
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Which One Is Right for You?",
+    },
+    {
+      type: "paragraph",
+      text: "Consider Short-Term Insurance IF:",
+    },
+    {
+      type: "bullets",
+      items: [
+        { text: "You missed Open Enrollment and don't qualify for a Special Enrollment Period." },
+        { text: "You are in between jobs and just need 30 to 90 days of catastrophic backup until your new employer's benefits kick in." },
+        { text: "You are healthy, take no regular prescription medications, and just want protection against a freak accident or emergency room visit." },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Stick with an ACA Plan IF:",
+    },
+    {
+      type: "bullets",
+      items: [
+        { text: "You have any ongoing health conditions, take regular medications, or need routine doctor visits." },
+        { text: "You are planning to start a family." },
+        { text: "You want complete coverage without worrying about fine-print exclusions." },
+        { text: "Your income makes you eligible for premium subsidies that bring ACA costs down significantly." },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Short-term plans aren't \"bad\" insurance. They're just limited insurance. They do exactly what they were built to do: protect your bank account from catastrophic emergency bills for a few weeks or months. However, if you need actual healthcare — routine visits, medications, chronic condition maintenance — an ACA plan is almost always the safer, more comprehensive choice. Always read the policy fine print before signing so you know exactly what is (and isn't) covered.",
+    },
+  ],
+},
+  {
   slug: "aca-myths-vs-facts",
   title: "ACA Myths vs. Facts",
   excerpt:
