@@ -28,7 +28,7 @@ export const BLOGS: BlogPost[] = [
     "Short-term plans look like a steal compared to traditional ACA coverage — but there's a reason for that price gap. Here's what you're actually paying for, and what happens if you need to use the plan.",
   caption:
     "Cheap and fast vs. comprehensive and protected. Before you sign up for a bargain short-term policy, know exactly what it won't cover.",
-  date: "2026-07-29",
+  date: "2026-07-31",
   category: "Health Insurance",
   readTime: "5 min read",
   image: "/short-term-health-insurance-vs-aca-coverage.webp",
