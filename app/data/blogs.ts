@@ -21,7 +21,189 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+{
+  slug: "aca-marketplace-gig-workers-freelancers-independent-contractors",
+  title: "ACA Marketplace Options for Gig Workers, Freelancers, and Independent Contractors",
+  excerpt:
+    "Leaving traditional employment means losing the HR department that quietly handled your benefits. Here's how self-employed workers can navigate the ACA Marketplace, subsidies, and tax deductions.",
+  caption:
+    "From MAGI-based subsidies to HSA tax strategy and the Self-Employed Health Insurance Deduction, here's what 1099 workers need to know before picking a plan.",
+  date: "2026-08-11",
+  category: "Coverage Options",
+  readTime: "6 min read",
+  image: "/aca-marketplace-gig-workers-freelancers.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "When you leave traditional employment, you trade a predictable paycheck for freedom. But you also lose the HR department that quietly handles your health benefits behind the scenes.",
+    },
+    {
+      type: "paragraph",
+      text: "For 1099 contractors, rideshare drivers, and solo freelancers, securing health insurance is completely on you. The Affordable Care Act (ACA) Marketplace is usually the most practical safety net available if you know how to navigate it as a self-employed worker.",
+    },
 
+    {
+      type: "heading",
+      text: "1. How Income Subsidies Work When Your Paychecks Vary",
+    },
+    {
+      type: "paragraph",
+      text: "The main reason to shop through the ACA Marketplace (via HealthCare.gov or your state's exchange) is access to Premium Tax Credits. These credits lower your monthly bill based on your projected household income.",
+    },
+    {
+      type: "heading",
+      text: "The Net Income Advantage",
+    },
+    {
+      type: "paragraph",
+      text: "Marketplace subsidies aren't calculated on your gross revenue. They are based on your Modified Adjusted Gross Income (MAGI).",
+    },
+    {
+      type: "paragraph",
+      text: "As an independent contractor, that means your estimate uses your net self-employment income (gross earnings minus business deductions like mileage, home office expenses, equipment, and software). Lowering your taxable net income through legitimate business deductions can actually increase your tax credit and drop your monthly premium.",
+    },
+    {
+      type: "heading",
+      text: "Managing Fluctuating Earnings",
+    },
+    {
+      type: "paragraph",
+      text: "If your client retainer ends in June or you hit a massive project bonus in October, your income shifts.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Underestimating:",
+          text: " If you end up making significantly more than projected, you may have to repay a portion of your subsidy when filing taxes.",
+        },
+        {
+          bold: "Overestimating:",
+          text: " If you earn less than expected, you'll get the excess tax credit back as a refund.",
+        },
+      ],
+    },
+    {
+      type: "pro_tip",
+      text: "Log into your Marketplace portal every quarter to update your projected earnings. Adjusting your income throughout the year prevents a surprise tax bill in April.",
+    },
+
+    {
+      type: "heading",
+      text: "2. Decoding Plan Tiers for the Self-Employed",
+    },
+    {
+      type: "paragraph",
+      text: "ACA plans are broken into metal tiers based on how you and the insurer split care costs. None of these tiers represent \"better\" or \"worse\" medical quality; they simply offer different financial structures.",
+    },
+    {
+      type: "table",
+      headers: ["Metal Tier", "Monthly Premium", "Out-of-Pocket Costs", "Best Suited For"],
+      rows: [
+        ["Bronze", "Lowest", "Highest", "People who rarely visit the doctor and want protection against catastrophic medical debt."],
+        ["Silver", "Moderate", "Moderate", "Those who qualify for extra savings (Cost-Sharing Reductions) or want balanced costs."],
+        ["Gold", "High", "Low", "Anyone with ongoing prescriptions, chronic conditions, or frequent care needs."],
+        ["Platinum", "Highest", "Lowest", "High utilization where predictable, minimal copays are priority."],
+      ],
+    },
+    {
+      type: "heading",
+      text: 'The "Cost-Sharing Reduction" (CSR) Secret',
+    },
+    {
+      type: "paragraph",
+      text: "If your income falls between 100% and 250% of the Federal Poverty Level, pick a silver plan. Choosing Silver unlocks Extra Savings (Cost-Sharing Reductions) that automatically lower your deductible, copays, and out-of-pocket maximums. A Silver plan with CSRs often provides Gold- or Platinum-level coverage at a fraction of the cost.",
+    },
+
+    {
+      type: "heading",
+      text: "3. High-Deductible Plans (HDHPs) Paired with HSAs",
+    },
+    {
+      type: "paragraph",
+      text: "For healthy freelancers, pairing a Bronze or Silver High-Deductible Health Plan with a Health Savings Account (HSA) offers a powerful tax strategy.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Triple Tax Advantage:",
+          text: " Money goes into an HSA tax-free, grows tax-free, and comes out tax-free for qualified medical expenses.",
+        },
+        {
+          bold: "Taxable Income Reduction:",
+          text: " Every dollar you deposit into an HSA lowers your Adjusted Gross Income, which can further boost your ACA subsidy eligibility.",
+        },
+        {
+          bold: "Rollover Capability:",
+          text: " Unlike FSAs, HSA funds belong to you forever. Unused money rolls over year after year, building a dedicated emergency medical fund.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "4. Key Deadlines and Qualifying Life Events",
+    },
+    {
+      type: "paragraph",
+      text: "You can only enroll in or switch ACA plans during specific windows:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Annual Open Enrollment:",
+          text: " Runs annually from November 1 through January 15 in most states.",
+        },
+        {
+          bold: "Special Enrollment Periods (SEPs):",
+          text: " If you leave a full-time W-2 job and lose your employer health coverage, that triggers a 60-day SEP window. Moving to a new ZIP code, getting married, or having a baby also opens a 60-day window to select a plan outside of open enrollment.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "5. Don't Forget the Self-Employed Health Insurance Deduction",
+    },
+    {
+      type: "paragraph",
+      text: "The ACA Marketplace subsidy reduces what you pay upfront. At tax time, you may also qualify for the Self-Employed Health Insurance Deduction.",
+    },
+    {
+      type: "paragraph",
+      text: "This allows you to deduct 100% of the health insurance premiums you paid out-of-pocket (the amount not covered by subsidies) as an above-the-line tax deduction on Schedule 1. It reduces your overall federal income tax, regardless of whether you itemize deductions or take the standard deduction.",
+    },
+
+    {
+      type: "heading",
+      text: "Smart Checklist Before Selecting a Plan",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Check the Doctor Network:",
+          text: " Ensure your preferred doctors and specialists are in-network. ACA plans frequently use narrower networks (EPOs or HMOs) to keep costs down.",
+        },
+        {
+          bold: "Verify Formulary Drugs:",
+          text: " Search the plan's drug formulary to confirm your regular prescriptions are covered and see what tier they fall under.",
+        },
+        {
+          bold: "Look at the Out-of-Pocket Maximum:",
+          text: " Don't judge a plan solely by its monthly premium or deductible. The out-of-pocket maximum represents your absolute worst-case financial ceiling for covered care in a single year.",
+        },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Self-employment means building your own safety net from scratch, but it doesn't mean going without one. With a clear read on your MAGI, the right metal tier, and the deductions available at tax time, gig workers and freelancers can turn ACA Marketplace shopping from a source of anxiety into a manageable, even strategic, part of running their business.",
+    },
+  ],
+},
 {
   slug: "aca-marketplaces-reducing-uninsured-rates-nationwide",
   title: "The Role of ACA Marketplaces in Reducing Uninsured Rates Nationwide",

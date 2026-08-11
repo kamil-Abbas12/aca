@@ -216,6 +216,13 @@ const articleSchema = {
           ))}
         </section>
 
+        {/* CTA */}
+        <div className="mt-10 rounded-2xl bg-blue-700 px-6 py-6 text-center shadow-md">
+          <p className="text-base font-bold leading-relaxed text-white sm:text-lg">
+            Interested in finding the right health insurance coverage? Call us now and get your coverage sorted today.
+          </p>
+        </div>
+
         {/* Navigation */}
         <nav className="mt-10 flex flex-wrap gap-3" aria-label="Blog navigation">
           <Link
