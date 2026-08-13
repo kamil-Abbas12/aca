@@ -1,6 +1,8 @@
-import { BLOGS, ContentBlock } from "@/app/data/blogs";
+import { BLOGS, ContentBlock } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
+import RelatedArticles from "@/app/components/RelatedArticles";
+
 const BASE_URL = "https://affordablecareact.topdoglead.com";
 
 export async function generateMetadata({ params }: any) {
@@ -12,7 +14,11 @@ export async function generateMetadata({ params }: any) {
   const description = post.excerpt || post.caption || "Health insurance tips and insights";
 
   return {
-    title: `${post.title} | Top Dog Leads LLC`,
+    // NOTE: title is just the post title now — the root layout's
+    // `template: "%s | Top Dog Leads LLC"` already appends the brand
+    // suffix. Adding it here too was causing "... | Top Dog Leads LLC |
+    // Top Dog Leads LLC" to render in titles.
+    title: post.title,
     description,
     alternates: { canonical: `${BASE_URL}/blog/${post.slug}` },
     openGraph: {
@@ -26,7 +32,6 @@ export async function generateMetadata({ params }: any) {
     twitter: { card: "summary_large_image", title: post.title, description },
   };
 }
-
 
 function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
   switch (block.type) {
@@ -154,20 +159,27 @@ export default async function BlogDetailPage({
       </main>
     );
   }
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: post.title,
-  description: post.excerpt || post.caption,
-  image: `${BASE_URL}${post.image}`,
-  datePublished: post.date,
-  author: { "@type": "Organization", name: "Top Dog Leads LLC" },
-  publisher: { "@type": "Organization", name: "Top Dog Leads LLC" },
-  mainEntityOfPage: `${BASE_URL}/blog/${post.slug}`,
-};
-// <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt || post.caption,
+    image: `${BASE_URL}${post.image}`,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: "Top Dog Leads LLC" },
+    publisher: { "@type": "Organization", name: "Top Dog Leads LLC" },
+    mainEntityOfPage: `${BASE_URL}/blog/${post.slug}`,
+  };
+
   return (
     <main className="min-h-screen bg-[#f7efe6]" role="main">
+      {/* JSON-LD: BlogPosting — was previously built but never rendered */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       <article className="mx-auto max-w-3xl px-4 py-20">
 
         {/* Header */}
@@ -222,6 +234,10 @@ const articleSchema = {
             Interested in finding the right health insurance coverage? Call us now and get your coverage sorted today.
           </p>
         </div>
+
+        {/* Related Articles — fixes thin internal linking on posts that
+            previously had only one inbound dofollow link */}
+        <RelatedArticles currentSlug={post.slug} category={post.category} limit={3} />
 
         {/* Navigation */}
         <nav className="mt-10 flex flex-wrap gap-3" aria-label="Blog navigation">

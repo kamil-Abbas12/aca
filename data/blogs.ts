@@ -1,4 +1,4 @@
-// app/data/blogs.ts
+// data/blogs.ts
 
 export type ContentBlock =
   | { type: "heading"; text: string }
@@ -25,7 +25,8 @@ export const BLOGS: BlogPost[] = [
   slug: "aca-marketplace-gig-workers-freelancers-independent-contractors",
   title: "ACA Marketplace Options for Gig Workers, Freelancers, and Independent Contractors",
   excerpt:
-    "Leaving traditional employment means losing the HR department that quietly handled your benefits. Here's how self-employed workers can navigate the ACA Marketplace, subsidies, and tax deductions.",
+      "Self-employed? Here's how gig workers and freelancers can navigate the ACA Marketplace, subsidies, and tax deductions without an HR department.",
+
   caption:
     "From MAGI-based subsidies to HSA tax strategy and the Self-Employed Health Insurance Deduction, here's what 1099 workers need to know before picking a plan.",
   date: "2026-08-11",
@@ -208,7 +209,8 @@ export const BLOGS: BlogPost[] = [
   slug: "aca-marketplaces-reducing-uninsured-rates-nationwide",
   title: "The Role of ACA Marketplaces in Reducing Uninsured Rates Nationwide",
   excerpt:
-    "Since 2014, ACA Marketplaces have cut the U.S. uninsured rate nearly in half. Here's a look at the mechanisms behind that shift - and the challenges still standing in the way.",
+     "Since 2014, ACA Marketplaces have cut the U.S. uninsured rate nearly in half. Here's how — and the challenges still standing in the way.",
+
   caption:
     "Guaranteed issue rules, income-based subsidies, and standardized metal tiers reshaped how Americans buy individual health coverage. Here's how the Marketplace actually moved the needle.",
   date: "2026-08-05",
@@ -340,7 +342,8 @@ export const BLOGS: BlogPost[] = [
   slug: "short-term-health-insurance-vs-aca-coverage",
   title: "Short-Term Health Insurance vs. ACA Coverage: What's the Real Difference?",
   excerpt:
-    "Short-term plans look like a steal compared to traditional ACA coverage — but there's a reason for that price gap. Here's what you're actually paying for, and what happens if you need to use the plan.",
+      "Short-term plans look like a steal compared to ACA coverage, but there's a reason for that price gap. Here's what you're really paying for.",
+
   caption:
     "Cheap and fast vs. comprehensive and protected. Before you sign up for a bargain short-term policy, know exactly what it won't cover.",
   date: "2026-07-31",
@@ -483,7 +486,8 @@ export const BLOGS: BlogPost[] = [
   slug: "aca-myths-vs-facts",
   title: "ACA Myths vs. Facts",
   excerpt:
-    "Between the endless acronyms, annual rule tweaks, and constant noise online, figuring out how the ACA actually impacts you can turn into a headache fast. Here's the reality behind the five most common myths.",
+     "Between the acronyms, rule tweaks, and online noise, figuring out how the ACA affects you can be a headache. Here's the reality behind five common myths.",
+
   caption:
     "Almost nobody enjoys talking about health insurance, but the basics are more straightforward than they sound once you filter out the common misconceptions. Let's separate the myths from reality.",
   date: "2026-07-23",
@@ -660,7 +664,8 @@ export const BLOGS: BlogPost[] = [
   slug: "aca-preventive-care-benefits",
   title: "ACA Preventive Care Benefits",
   excerpt:
-    "Thanks to the Affordable Care Act, a huge menu of routine health services is completely free — no copay, no coinsurance, and you don't have to hit your deductible first. Here's what's covered and how to avoid getting billed by accident.",
+      "Thanks to the ACA, many routine health services are completely free — no copay, no deductible. Here's what's covered and how to avoid a surprise bill.",
+
   caption:
     "You're already paying your premium every month — you might as well use the $0 preventive benefits built into your plan. Here's what's covered and the fine print that can trigger a surprise bill.",
   date: "2026-07-17",
@@ -825,7 +830,8 @@ export const BLOGS: BlogPost[] = [
     slug: "aca-subsidies-multigenerational-households",
     title: "How ACA Subsidies Work for MultiGenerational Households",
     excerpt:
-      "Living under one roof with multiple generations is a beautiful thing, but when it comes to ACA subsidies, the government's definition of 'household' probably doesn't match who sits at your dinner table.",
+       "Multigenerational living is wonderful, but for ACA subsidies, the government's definition of 'household' probably doesn't match who's at your table.",
+
     caption:
       "A single multigenerational home can actually contain two or three separate ACA households. Here's how to untangle tax pods, income counting, and the 2026 subsidy cliff.",
     date: "2026-07-09",
@@ -1017,7 +1023,8 @@ export const BLOGS: BlogPost[] = [
     title:
       "The Hidden Perks of ACA Plans: 10 Essential Health Benefits You Don't Pay a Deductible For",
     excerpt:
-      "Most people assume they're on their own until they hit their deductible. But under the ACA, a whole category of preventive and wellness services is covered at 100% - no deductible, no copay, no coinsurance.",
+        "Most people assume they're on their own until they hit their deductible. But under the ACA, many preventive services are covered at 100% — no cost.",
+
     caption:
       "A major subset of ACA-mandated services bypasses your deductible entirely. Here are the 10 high-value benefits you're already paying for every month and might not be using.",
     date: "2026-06-29",
@@ -1168,7 +1175,8 @@ export const BLOGS: BlogPost[] = [
   title:
     "The Reality of Mental Health Coverage: How ACA Plans Handle Therapy and Treatment",
   excerpt:
-    "Therapy isn't an optional add-on under the ACA - it's an Essential Health Benefit. But parity rules, deductibles, and network gaps still shape what you actually pay for mental health and substance use treatment.",
+      "Therapy isn't optional under the ACA — it's an Essential Health Benefit. But parity rules, deductibles, and network gaps still shape what you pay.",
+
   caption:
     "Mental health care is legally guaranteed under ACA plans, but networks, deductibles, and medical necessity reviews still decide what you pay out of pocket. Here's how coverage really works in practice.",
   date: "2026-06-24",
@@ -1292,7 +1300,7 @@ export const BLOGS: BlogPost[] = [
     slug: "understanding-the-affordable-care-act",
     title: "Understanding the Affordable Care Act: A Beginner's Guide",
     excerpt:
-      "Navigating health insurance can feel overwhelming. This guide breaks down the ACA in plain language - from metal tiers and subsidies to enrollment windows.",
+        "Navigating health insurance can feel overwhelming. This guide breaks down the ACA in plain language, from metal tiers to enrollment windows.",
     caption:
       "Health insurance doesn't have to be confusing. Here's everything a beginner needs to know about the ACA, Marketplace plans, and how to get financial help.",
     date: "2026-06-10",

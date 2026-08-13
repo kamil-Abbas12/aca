@@ -1,8 +1,17 @@
+import { BLOGS } from "@/data/blogs";
 import BlogCard from "../components/BlogCard";
-import { BLOGS } from "../data/blogs";
+
+const BASE_URL = "https://affordablecareact.topdoglead.com";
+
 export const metadata = {
-  title: "Health Insurance Blog | ACA Tips & Guides | Top Dog Leads",
-  description: "Browse expert health insurance tips, ACA Marketplace guides, subsidy explainers, and enrollment advice to help you find affordable coverage.",
+ 
+  title: "Health Insurance Blog | ACA Tips & Guides",
+  description:
+    "Browse expert health insurance tips, ACA Marketplace guides, subsidy explainers, and enrollment advice to help you find affordable coverage.",
+  
+  alternates: {
+    canonical: `${BASE_URL}/blog`,
+  },
 };
 
 export default function BlogGridPage() {

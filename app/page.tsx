@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "Affordable Health Insurance Plans | Top Dog Leads LLC",
   description:
-    "Compare ACA-compliant health insurance plans in your area. Licensed agents help you find affordable coverage — major medical, short-term & more. Free quote, no credit card.",
+  "Compare ACA-compliant health insurance plans in your area. Licensed agents help you find affordable coverage. Free quote, no credit card.",
   alternates: {
     canonical: "https://affordablecareact.topdoglead.com",
   },

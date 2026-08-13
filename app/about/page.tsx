@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 export const metadata: Metadata = {
   title: "About Us | Top Dog Leads LLC",
   description:
-    "Learn about Top Dog Leads LLC — an independent health insurance marketing company connecting Americans with licensed agents to find affordable ACA plans, major medical, and short-term coverage.",
+  "Top Dog Leads LLC connects Americans with licensed agents to find affordable ACA-compliant and short-term health insurance plans.",
   alternates: { canonical: "https://affordablecareact.topdoglead.com/about" },
   openGraph: {
     title: "About Top Dog Leads LLC | Affordable Health Insurance Experts",

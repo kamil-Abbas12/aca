@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export const metadata: Metadata = {
   title: "Licensing Information | Top Dog Leads LLC",
   description:
-    "View the licensing information for Top Dog Leads LLC and our licensed insurance agent partners. We connect consumers with properly licensed health insurance professionals across the United States.",
+  "View licensing information for Top Dog Leads LLC and our partner agents, licensed to provide health insurance guidance across the United States.",
   alternates: { canonical: "https://affordablecareact.topdoglead.com/licensing" },
   robots: { index: true, follow: true },
 };
