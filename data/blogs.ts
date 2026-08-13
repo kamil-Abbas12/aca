@@ -660,7 +660,7 @@ export const BLOGS: BlogPost[] = [
     },
   ],
 },
-  {
+ {
   slug: "aca-preventive-care-benefits",
   title: "ACA Preventive Care Benefits",
   excerpt:
@@ -1203,6 +1203,35 @@ export const BLOGS: BlogPost[] = [
     {
       type: "paragraph",
       text: "Parity means financial and quantitative limits must be equal. If your plan offers unlimited visits to a primary care doctor for a chronic physical condition with a $30 copay, it generally cannot limit you to 12 therapy sessions a year or charge a $60 copay for those sessions. The deductible, copayment, and out-of-pocket maximum rules must run parallel to medical and surgical benefits.",
+    },
+    {
+      type: "heading",
+      text: "ACA Mental Health Coverage Requirements: The Specifics",
+    },
+    {
+      type: "paragraph",
+      text: "If you're trying to understand exactly what the law requires, it comes down to three specific mandates every ACA-compliant plan must meet:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Mandatory inclusion:",
+          text: " Mental health and substance use disorder services must be listed among the plan's Essential Health Benefits — insurers cannot sell an ACA-compliant plan on the individual or small-group market without including this category of care.",
+        },
+        {
+          bold: "No annual or lifetime dollar limits:",
+          text: " Unlike pre-ACA plans, insurers cannot cap the total dollar amount they'll pay toward mental health or substance use treatment over the course of a year or a lifetime.",
+        },
+        {
+          bold: "Equal treatment under parity law:",
+          text: " Copays, deductibles, visit limits, and prior authorization rules for mental health care must be no more restrictive than those applied to physical health care under the same plan.",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "In practice, this means a plan cannot legally advertise medical coverage while quietly excluding therapy, psychiatric care, or addiction treatment — every ACA Marketplace plan, regardless of carrier or metal tier, is required to meet this baseline.",
     },
     {
       type: "heading",
