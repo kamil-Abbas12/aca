@@ -3,7 +3,7 @@ import Link from "next/link";
 const BASE_URL = "https://affordablecareact.topdoglead.com";
 
 export const metadata = {
-  title: "Our Partner Carriers | Top Dog Leads LLC",
+  title: "Our Partner Carriers ",
   description:
     "Top Dog Leads LLC partners with licensed health insurance carriers nationwide to help you compare ACA plans and find affordable coverage that fits your needs.",
   alternates: { canonical: `${BASE_URL}/partners` },

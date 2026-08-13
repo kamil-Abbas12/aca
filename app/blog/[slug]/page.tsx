@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: any) {
   const { slug } = await params;
   const post = BLOGS.find((p) => p.slug === slug);
 
-  if (!post) return { title: "Blog | Top Dog Leads LLC" };
+  if (!post) return { title: "Blog " };
 
   const description = post.excerpt || post.caption || "Health insurance tips and insights";
 

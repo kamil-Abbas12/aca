@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Top Dog Leads LLC",
+  title: "Privacy Policy ",
   description:
   "Read the Top Dog Leads LLC Privacy Policy to learn how we collect, use, and protect your personal information on our site.",
   alternates: { canonical: "https://affordablecareact.topdoglead.com/privacy-policy" },

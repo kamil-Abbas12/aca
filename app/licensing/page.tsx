@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Licensing Information | Top Dog Leads LLC",
+  title: "Licensing Information ",
   description:
   "View licensing information for Top Dog Leads LLC and our partner agents, licensed to provide health insurance guidance across the United States.",
   alternates: { canonical: "https://affordablecareact.topdoglead.com/licensing" },

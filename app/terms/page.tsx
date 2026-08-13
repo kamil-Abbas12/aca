@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Top Dog Leads LLC",
+  title: "Terms & Conditions ",
   description:
     "Read the Terms and Conditions for using Top Dog Leads LLC's health insurance comparison and lead generation services.",
   alternates: { canonical: "https://affordablecareact.topdoglead.com/terms" },
