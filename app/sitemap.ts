@@ -1,6 +1,6 @@
 // app/sitemap.ts
+import { BLOGS } from "@/data/blogs";
 import { MetadataRoute } from "next";
-import { BLOGS } from "@/app/data/blogs";
 
 const BASE_URL = "https://affordablecareact.topdoglead.com";
 
