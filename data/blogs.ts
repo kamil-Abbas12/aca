@@ -21,6 +21,129 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+  {
+  slug: "common-aca-myths-and-misconceptions-debunked",
+  title: "Common ACA Myths and Misconceptions Debunked",
+  excerpt:
+    "Held off on ACA marketplace plans because of something you heard? Here's the real story behind the biggest ACA myths.",
+  caption:
+    "From the 'subsidy cliff' to what's actually covered, here's the fact check behind the five ACA myths that keep people from shopping the Marketplace.",
+  date: "2026-08-20",
+  category: "Health Insurance",
+  readTime: "5 min read",
+  image: "/common-aca-myths-and-misconceptions-debunked.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "Shopping for health insurance usually sits somewhere between doing taxes and waiting at the DMV on the list of things people look forward to. Because the Affordable Care Act (ACA) involves government regulations, shifting subsidies, and a massive wall of industry jargon, a lot of bad information floats around every year when enrollment season rolls around.",
+    },
+    {
+      type: "paragraph",
+      text: "If you've held off on checking out ACA marketplace plans because of something you heard from a coworker or read online, it might be time for a fact check. Here is the real story behind the biggest ACA myths.",
+    },
+
+    {
+      type: "heading",
+      text: 'Myth 1: "I make too much money to get any savings."',
+    },
+    {
+      type: "paragraph",
+      text: 'This used to be closer to the truth, but the rules shifted significantly in recent years. Originally, if your income crossed four times the federal poverty line, your federal financial help dropped to zero, a harsh cutoff known as the "subsidy cliff."',
+    },
+    {
+      type: "paragraph",
+      text: "Under current policy, those rules are far more flexible. Sliding-scale tax credits now ensure that no eligible buyer has to spend more than a set percentage of their household income on a benchmark silver plan, regardless of whether they cross the old income threshold. If premiums are high relative to what you earn, there's a strong chance you still qualify for financial help.",
+    },
+
+    {
+      type: "heading",
+      text: 'Myth 2: "ACA plans barely cover anything useful."',
+    },
+    {
+      type: "paragraph",
+      text: "Some people mistake marketplace coverage for bare-bones indemnity plans, but legally, the opposite is true. Every single ACA-compliant policy is required by federal law to cover 10 Essential Health Benefits.",
+    },
+    {
+      type: "paragraph",
+      text: "That means your plan must include:",
+    },
+    {
+      type: "bullets",
+      items: [
+        { text: "Emergency services and hospitalization" },
+        { text: "Prescription drug coverage" },
+        { text: "Maternity, newborn, and pediatric care" },
+        { text: "Mental health and substance abuse treatment" },
+        {
+          text: "Free preventative care, like annual checkups, mammograms, and routine screenings",
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "In short, you aren't paying for an emergency-only safety net; these plans provide comprehensive medical coverage.",
+    },
+
+    {
+      type: "heading",
+      text: 'Myth 3: "If I miss Open Enrollment, I\'m completely out of luck until next year."',
+    },
+    {
+      type: "paragraph",
+      text: "The main Open Enrollment window runs every year from November 1 through January 15 in most states. While missing that window means you can't just sign up on a random Tuesday, life rarely stays completely still for twelve months.",
+    },
+    {
+      type: "paragraph",
+      text: "If you go through a Qualifying Life Event (QLE), you trigger a 60-day Special Enrollment Period. Common triggers include:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          text: "Losing health coverage through a job, divorce, or aging out of a parent's plan",
+        },
+        { text: "Getting married or having a baby" },
+        { text: "Moving to a new ZIP code or county" },
+        { text: "Significant shifts in household income" },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: 'Myth 4: "I\'ll be turned down or charged more because of my medical history."',
+    },
+    {
+      type: "paragraph",
+      text: "Before the ACA became law, a past diagnosis like asthma, high blood pressure, or a previous surgery could easily get an application rejected or send monthly premiums through the roof.",
+    },
+    {
+      type: "paragraph",
+      text: "Today, pre-existing condition protections are absolute. Insurance carriers selling ACA plans cannot decline your application, refuse to cover treatment for ongoing conditions, or charge you a higher monthly premium based on your health history. Everyone in the same geographic area and age bracket pays the same base rate for the same plan.",
+    },
+
+    {
+      type: "heading",
+      text: 'Myth 5: "The cheapest plan is always the best deal."',
+    },
+    {
+      type: "paragraph",
+      text: 'When you compare plans online, it\'s tempting to sort by "Lowest Monthly Premium" and hit select. While a Bronze plan with a $0 or $20 monthly cost looks great on paper, it usually comes with a steep annual deductible.',
+    },
+    {
+      type: "paragraph",
+      text: "If you visit the doctor regularly, take brand-name medications, or need routine physical therapy, picking a plan with a slightly higher monthly premium (like a silver or gold tier) often lowers your total yearly healthcare costs dramatically. The goal is to balance what you pay every month with what you'll actually have to pay at the clinic counter.",
+    },
+
+    {
+      type: "heading",
+      text: "The Takeaway",
+    },
+    {
+      type: "closing",
+      text: "Health insurance rarely feels simple, but operating on outdated assumptions usually leads to two costly outcomes: overpaying for coverage you don't need, or staying uninsured out of fear that you can't afford it. Taking twenty minutes to put your zip code and household details into the official marketplace calculator is always worth the time — you might find options that fit your budget better than you expect.",
+    },
+  ],
+},
 {
   slug: "aca-marketplace-gig-workers-freelancers-independent-contractors",
   title: "ACA Marketplace Options for Gig Workers, Freelancers, and Independent Contractors",
