@@ -1,9 +1,9 @@
 "use client";
 
+import { BLOGS } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { BLOGS } from "../data/blogs";
 
 function ChevronRightIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

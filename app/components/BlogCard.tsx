@@ -1,6 +1,6 @@
+import { BlogPost } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
-import { BlogPost } from "../data/blogs";
 
 export default function BlogCard({ post }: { post: BlogPost }) {
   return (
