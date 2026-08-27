@@ -74,7 +74,7 @@ const sections = [
   {
     id: "contact-terms",
     title: "13. Contact Information",
-    body: "For questions about these Terms and Conditions, please contact us at: Top Dog Leads LLC | Phone: +1 866 896 0447 | Email: legal@topdoglead.com",
+    body: "For questions about these Terms and Conditions, please contact us at: Top Dog Leads LLC | Phone: +1 866 896 0447 | Email: support@topdoglead.com",
   },
 ];
 

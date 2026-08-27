@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 export const metadata: Metadata = {
   title: "Licensing Information ",
@@ -36,7 +35,6 @@ const stateGroups = [
 export default function LicensingPage() {
   return (
     <>
-      <Navbar />
       <main id="main-content">
 
         {/* Hero */}
@@ -176,7 +174,6 @@ export default function LicensingPage() {
         </section>
 
       </main>
-      <Footer />
     </>
   );
 }

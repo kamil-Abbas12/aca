@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 export const metadata: Metadata = {
   title: "Do Not Call Policy | Top Dog Leads LLC",
@@ -67,7 +66,7 @@ export default function DoNotCallPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#534AB7] mt-0.5">•</span>
-                  Email us at <a href="mailto:donotcall@topdoglead.com" className="text-[#534AB7] underline">donotcall@topdoglead.com</a> with your full name and phone number(s) you wish to register.
+                  Email us at <a href="mailto:support@topdoglead.com" className="text-[#534AB7] underline">support@topdoglead.com</a> with your full name and phone number(s) you wish to register.
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#534AB7] mt-0.5">•</span>
@@ -118,7 +117,7 @@ export default function DoNotCallPage() {
               </p>
               <ul className="space-y-2 text-sm text-[#5a5870]">
                 <li>📞 <a href="tel:+18668960447" className="text-[#534AB7]">+1 866 896 0447</a></li>
-                <li>✉️ <a href="mailto:donotcall@topdoglead.com" className="text-[#534AB7]">donotcall@topdoglead.com</a></li>
+                <li>✉️ <a href="mailto:support@topdoglead.com" className="text-[#534AB7]">support@topdoglead.com</a></li>
                 <li>🏢 Top Dog Leads LLC — Independent Insurance Marketing Company</li>
               </ul>
             </div>

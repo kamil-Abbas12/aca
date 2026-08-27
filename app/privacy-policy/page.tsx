@@ -97,7 +97,7 @@ const sections = [
       "If you have questions or concerns about this Privacy Policy or our data practices, please contact us:",
       "Top Dog Leads LLC",
       "Phone: +1 866 896 0447",
-      "Email: privacy@topdoglead.com",
+      "Email: support@topdoglead.com",
       "You may also exercise your privacy rights by calling or emailing us directly.",
     ],
   },
