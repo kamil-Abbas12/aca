@@ -48,7 +48,6 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
       <main id="main-content">
 
         {/* Hero */}
