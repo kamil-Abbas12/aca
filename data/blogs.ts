@@ -28,7 +28,7 @@ export const BLOGS: BlogPost[] = [
     "Navigating health insurance as a parent feels like solving a puzzle where the pieces keep changing size. Here's what ACA plans actually cover for pediatric care, and how subsidies and the 'family glitch' fix affect what you pay.",
   caption:
     "From pediatric dental and vision built into every plan to the fixed 'family glitch,' here's what parents actually need to know before enrolling kids in ACA coverage.",
-  date: "2026-09-03",
+  date: "2026-09-02",
   category: "Family Plans",
   readTime: "5 min read",
   image: "/aca-for-families-with-kids.webp",
