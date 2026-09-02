@@ -21,6 +21,138 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+  {
+  slug: "aca-for-families-with-kids",
+  title: "ACA for Families with Kids",
+  excerpt:
+    "Navigating health insurance as a parent feels like solving a puzzle where the pieces keep changing size. Here's what ACA plans actually cover for pediatric care, and how subsidies and the 'family glitch' fix affect what you pay.",
+  caption:
+    "From pediatric dental and vision built into every plan to the fixed 'family glitch,' here's what parents actually need to know before enrolling kids in ACA coverage.",
+  date: "2026-09-03",
+  category: "Family Plans",
+  readTime: "5 min read",
+  image: "/aca-for-families-with-kids.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "Navigating health insurance as a parent feels like trying to solve a puzzle where the pieces keep changing size. You want coverage that actually covers pediatricians, urgent care visits, and middle-of-the-night ER trips without leaving you with a jaw-dropping bill.",
+    },
+    {
+      type: "paragraph",
+      text: "If you've been looking into ACA (Affordable Care Act) plans for your family, here is what you actually need to know.",
+    },
+
+    {
+      type: "heading",
+      text: "1. Essential Health Benefits: Kids Get Built-In Perks",
+    },
+    {
+      type: "paragraph",
+      text: 'Under the ACA, every qualified health plan must cover ten "Essential Health Benefits." For families, two of these are absolute game-changers:',
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Pediatric Dental and Vision:",
+          text: " Unlike adult plans (where dental and vision are usually separate add-ons), ACA plans must include dental and vision coverage for children under 19. That means routine eye exams, glasses, and pediatric teeth cleanings are built right in.",
+        },
+        {
+          bold: "Preventive Care at $0 Out-of-Pocket:",
+          text: " Well-child visits, routine vaccinations, behavioral assessments, and developmental screenings are fully covered. You don't pay a copay or deductible for these standard checkups as long as you stay in-network.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "2. The Financial Help: Subsidies & Tax Credits",
+    },
+    {
+      type: "paragraph",
+      text: "The cost of insurance usually comes down to premium tax credits (subsidies). How much help you get depends on your household size and estimated income for the year.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Premium Tax Credits:",
+          text: " These lower your monthly insurance payment. If your income drops or your family grows, your subsidy recalculates to lower your costs further.",
+        },
+        {
+          bold: "Cost-Sharing Reductions (CSRs):",
+          text: " If your income falls into a lower bracket, you might qualify for extra savings that lower your deductible, copays, and out-of-pocket max — not just the monthly premium.",
+        },
+      ],
+    },
+    {
+      type: "pro_tip",
+      text: "When estimating your household income on the Marketplace, remember to include every dependent you claim on your taxes.",
+    },
+
+    {
+      type: "heading",
+      text: '3. "Fixing" the Family Glitch',
+    },
+    {
+      type: "paragraph",
+      text: 'For years, families faced an unfair rule known as the "family glitch." If one parent was offered affordable individual insurance through work, the whole family was barred from receiving ACA subsidies even if adding the kids to the employer plan cost a fortune.',
+    },
+    {
+      type: "paragraph",
+      text: "That rule has been fixed. Today, affordability is calculated based on what it costs to cover the entire family through employer insurance. If your workplace plan costs more than roughly 8.39% of your total household income to cover everyone, your spouse and kids can opt for subsidized ACA Marketplace plans instead.",
+    },
+
+    {
+      type: "heading",
+      text: "4. ACA vs. CHIP / Medicaid",
+    },
+    {
+      type: "paragraph",
+      text: "When you apply for ACA coverage through Healthcare.gov (or your state's marketplace), the system automatically checks if your children qualify for CHIP (Children's Health Insurance Program) or Medicaid.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Higher Income Eligibility:",
+          text: " In many states, income limits for children to qualify for CHIP are significantly higher than adult Medicaid limits.",
+        },
+        {
+          bold: "Low to Zero Cost:",
+          text: " If your kids qualify for CHIP, they get comprehensive coverage (including prescription drugs, dental, and doctor visits) for very low copays or no cost at all.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Quick Checklist Before You Enroll",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Check Doctor Networks:",
+          text: " Make sure your kids' primary pediatrician and preferred pediatric hospitals are in the plan's network (HMO vs. PPO matters here).",
+        },
+        {
+          bold: "Look at the Formularies:",
+          text: " Double-check that any ongoing medications or allergy prescriptions are covered under the plan's drug list.",
+        },
+        {
+          bold: "Factor in Out-of-Pocket Maximums:",
+          text: " Kids are active and prone to unexpected injuries. A lower premium with a $15,000 family deductible might cost you more in an active year than a plan with a slightly higher monthly payment.",
+        },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Choosing a family ACA plan comes down to more than the sticker price on your monthly premium. Confirm your pediatrician is in-network, check the drug formulary, and weigh the out-of-pocket maximum before you enroll — those details matter far more once you're actually using the coverage.",
+    },
+  ],
+},
  {
   slug: "how-to-find-an-in-network-therapist-aca-plan",
   title: "How to Actually Find an In-Network Therapist Under Your ACA Plan",
