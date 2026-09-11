@@ -28,7 +28,7 @@ export const BLOGS: BlogPost[] = [
       "Retiring before Medicare eligibility doesn't mean paying full price for health insurance. The real secret isn't how much wealth you have in the bank — it's how you control your taxable income.",
     caption:
       "ACA subsidies are based on taxable income (MAGI), not net worth. Here's how early retirees can blend withdrawals from different accounts to unlock premium tax credits before Medicare kicks in at 65.",
-    date: "2026-09-10",
+    date: "2026-09-11",
     category: "Subsidies & Cost Help",
     readTime: "7 min read",
     image: "/aca-health-insurance-before-65-early-retirees.webp",
