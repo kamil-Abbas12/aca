@@ -22,6 +22,182 @@ export interface BlogPost {
 
 export const BLOGS: BlogPost[] = [
   {
+    slug: "aca-health-insurance-before-65-early-retirees",
+    title: "Unlocking ACA Health Insurance Before 65: A Practical Guide for Early Retirees",
+    excerpt:
+      "Retiring before Medicare eligibility doesn't mean paying full price for health insurance. The real secret isn't how much wealth you have in the bank — it's how you control your taxable income.",
+    caption:
+      "ACA subsidies are based on taxable income (MAGI), not net worth. Here's how early retirees can blend withdrawals from different accounts to unlock premium tax credits before Medicare kicks in at 65.",
+    date: "2026-09-10",
+    category: "Subsidies & Cost Help",
+    readTime: "7 min read",
+    image: "/aca-health-insurance-before-65-early-retirees.webp",
+    content: [
+      {
+        type: "paragraph",
+        text: "Navigating the ACA as an early retiree isn't quite like navigating it as a traditional employee. The real secret isn't how much wealth you have in the bank; it's how you control your taxable income.",
+      },
+
+      {
+        type: "heading",
+        text: "1. The Core Secret: Wealth vs. Income",
+      },
+      {
+        type: "paragraph",
+        text: "The single most important rule to understand about the ACA marketplace is that eligibility for subsidies (Premium Tax Credits) is based on Modified Adjusted Gross Income (MAGI), not your net worth or total bank balance.",
+      },
+      {
+        type: "paragraph",
+        text: "You could have $3 million sitting in a brokerage account or Roth IRA, but if your taxable income for the year is $35,000, the ACA sees you as an individual living on $35,000. This opens up massive opportunities for premium tax credits that can lower your monthly health insurance cost from $1,200/month down to $100/month or even less.",
+      },
+      {
+        type: "heading",
+        text: "What Counts as MAGI for the ACA?",
+      },
+      {
+        type: "paragraph",
+        text: "MAGI includes wages, net self-employment income, capital gains, traditional IRA/401(k) withdrawals, taxable pensions, Social Security benefits, and taxable interest or dividends.",
+      },
+      {
+        type: "paragraph",
+        text: "Crucially, it does not include Roth IRA withdrawals or tax-free principal pulled from cash savings or a brokerage account basis.",
+      },
+
+      {
+        type: "heading",
+        text: "2. Managing Your \"Taxable Spigot\"",
+      },
+      {
+        type: "paragraph",
+        text: "To maximize your ACA subsidies, you need to control where your living expenses come from each year. Think of your retirement accounts as different water faucets:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Traditional IRA/401(k) withdrawals:",
+            text: " Turns the MAGI spigot UP (100% taxable income).",
+          },
+          {
+            bold: "Brokerage account capital gains:",
+            text: " Turns MAGI UP slightly (only the growth portion counts, not the original principal basis).",
+          },
+          {
+            bold: "Savings / checking cash:",
+            text: " Zero impact on MAGI.",
+          },
+          {
+            bold: "Roth IRA distributions:",
+            text: " Zero impact on MAGI (qualified tax-free distributions).",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "By blending income from these different sources, you can maintain a comfortable lifestyle — say, spending $80,000 a year — while generating an official taxable MAGI of only $32,000 on your tax return.",
+      },
+
+      {
+        type: "heading",
+        text: "3. Beware the \"Floor\" and the \"Cliff\"",
+      },
+      {
+        type: "paragraph",
+        text: "While pulling down your income sounds ideal, you have to keep two vital boundaries in mind.",
+      },
+      {
+        type: "heading",
+        text: "The Lower Boundary: The Medicaid Trap",
+      },
+      {
+        type: "paragraph",
+        text: "If you push your MAGI too low (typically below 138% of the Federal Poverty Level in expansion states, or 100% in non-expansion states), you won't qualify for ACA subsidies at all. Instead, you'll be directed into Medicaid. While Medicaid offers comprehensive care, network choices can be limited, and many retirees prefer to avoid it. Always target an income slightly above the 138% FPL line (around $20,400 for a single person or $27,700 for a couple in recent guidelines).",
+      },
+      {
+        type: "heading",
+        text: "The Upper Boundary: Cost-Sharing Reductions (CSRs)",
+      },
+      {
+        type: "paragraph",
+        text: "Post-ARP/IRA rules have softened the old \"subsidy cliff\" by capping silver plan premiums at 8.5% of income for higher earners. However, keeping your income in the sweet spot (between 150% and 250% FPL) unlocks Cost-Sharing Reductions (CSRs). CSRs dramatically lower your deductibles, copays, and out-of-pocket maximums if you choose a silver plan — turning a $6,000 deductible plan into a $500 deductible plan.",
+      },
+
+      {
+        type: "heading",
+        text: "4. Key Retirement Scenarios & Strategies",
+      },
+      {
+        type: "table",
+        headers: ["Scenario", "Strategy", "Key Takeaway"],
+        rows: [
+          [
+            "Heavy Traditional IRA Assets",
+            "Partial Roth Conversions",
+            "Convert just enough to hit target MAGI without pushing past subsidy thresholds.",
+          ],
+          [
+            "High Cash / Taxable Holdings",
+            "Living off Principal",
+            "Pull cash/basis to cover expenses while reporting minimal taxable gains.",
+          ],
+          [
+            "Unexpected High-Income Year",
+            "HSA / IRA Deductions",
+            "If taking a lump sum, use deductible IRA or HSA contributions to pull MAGI back down.",
+          ],
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "5. Timing Your Retirement Year",
+      },
+      {
+        type: "paragraph",
+        text: "A common trap for early retirees happens in the year they quit their jobs. If you retire in July after earning $90,000 in salary during the first half of the year, your annual MAGI will reflect that full salary plus any retirement withdrawals for the rest of the year.",
+      },
+      {
+        type: "paragraph",
+        text: "This often means paying full price for ACA coverage for the rest of that first calendar year before qualifying for full subsidies in year two.",
+      },
+      {
+        type: "pro_tip",
+        text: "If you leave mid-year, compare COBRA vs. ACA for the remaining months. Sometimes staying on COBRA until January 1st makes sense if you've already met your deductible at work or if your YTD salary disqualifies you from ACA subsidies for that calendar year.",
+      },
+
+      {
+        type: "heading",
+        text: "6. Practical Steps to Take Now",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Map out your income sources:",
+            text: " Inventory your taxable, tax-deferred, and tax-free accounts.",
+          },
+          {
+            bold: "Estimate your target benchmark:",
+            text: " Determine the income sweet spot for your household size on Healthcare.gov or your state marketplace.",
+          },
+          {
+            bold: "Check doctor networks:",
+            text: " ACA plans vary widely. Ensure your preferred physicians and local hospitals accept the specific plan network (HMO vs. PPO) before enrolling.",
+          },
+          {
+            bold: "Consult a CPA or financial advisor:",
+            text: " A single unexpected distribution or capital gain can shift your subsidy calculation by thousands of dollars.",
+          },
+        ],
+      },
+
+      {
+        type: "closing",
+        text: "Early retirement requires flexible planning, but health coverage doesn't have to break your financial independence roadmap. With deliberate income management, the ACA can act as a reliable, cost-effective bridge all the way to age 65.",
+      },
+    ],
+  },
+  {
   slug: "aca-for-families-with-kids",
   title: "ACA for Families with Kids",
   excerpt:
