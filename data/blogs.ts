@@ -22,6 +22,175 @@ export interface BlogPost {
 
 export const BLOGS: BlogPost[] = [
   {
+  slug: "aca-health-insurance-self-employed-income",
+  title: "ACA Health Insurance for Self-Employed Income",
+  excerpt:
+    "Freelancer? Learn how ACA subsidies are based on net income, not revenue, and how to report earnings correctly to maximize your health insurance savings.",
+  caption:
+    "The ACA marketplace calculates your subsidy on net profit, not gross revenue. Here's exactly how self-employed workers should report income, deduct expenses, and avoid a surprise tax bill.",
+  date: "2026-09-16",
+  category: "Subsidies & Cost Help",
+  readTime: "5 min read",
+  image: "/aca-health-insurance-self-employed-income.webp",
+  content: [
+    {
+      type: "paragraph",
+      text: "When you work for yourself, figuring out health insurance is one of those tasks that feels unnecessarily stressful. Unlike a traditional job where HR hands you a menu of options, freelance and self-employed health insurance falls entirely on your shoulders.",
+    },
+    {
+      type: "paragraph",
+      text: "The good news: the Affordable Care Act (ACA) Marketplace is often the best route for self-employed workers, as long as you know how to report your income correctly. Here's how ACA coverage works for self-employed income, how to calculate what you actually owe, and how to claim every tax break you're entitled to.",
+    },
+
+    {
+      type: "heading",
+      text: "The Big Difference: Revenue vs. Profit",
+    },
+    {
+      type: "paragraph",
+      text: "The biggest mistake freelancers make on HealthCare.gov is entering their gross revenue. The Marketplace doesn't care how much money your business takes in before expenses — it calculates your subsidy based on your Modified Adjusted Gross Income (MAGI).",
+    },
+    {
+      type: "paragraph",
+      text: "For self-employed people, your base income for ACA purposes is your net self-employment income — profit after business deductions:",
+    },
+    {
+      type: "paragraph",
+      text: "Net Self-Employment Income = Gross Revenue − Allowable Business Expenses",
+    },
+    {
+      type: "paragraph",
+      text: "If you bill $80,000 this year but spend $30,000 on software, travel, contract labor, and office supplies, your starting income for the ACA application is $50,000 — not $80,000.",
+    },
+
+    {
+      type: "heading",
+      text: "What Counts as ACA Income for Freelancers?",
+    },
+    {
+      type: "paragraph",
+      text: "When estimating your income for the upcoming coverage year, include:",
+    },
+    {
+      type: "bullets",
+      items: [
+        { bold: "Net business profit:", text: " your Schedule C net income." },
+        { bold: "W-2 income:", text: " if you mix freelancing with part-time employee work." },
+        { bold: "Investment income:", text: " interest, dividends, and capital gains." },
+        { bold: "Social Security benefits:", text: " if applicable." },
+      ],
+    },
+    {
+      type: "heading",
+      text: "What You Can Subtract to Lower Your MAGI",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Self-employed health insurance deduction:",
+          text: " the premiums you pay for yourself and your family reduce your Adjusted Gross Income (AGI).",
+        },
+        {
+          bold: "Half of your self-employment tax:",
+          text: " you can subtract the employer-equivalent portion of your SE tax.",
+        },
+        {
+          bold: "Retirement contributions:",
+          text: " contributions to a SEP-IRA, Solo 401(k), or Traditional IRA lower your reportable income, which can qualify you for higher healthcare savings.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "How to Estimate Fluctuating Income Without Getting Burned",
+    },
+    {
+      type: "paragraph",
+      text: "If your monthly income looks like a roller coaster, picking a single annual dollar amount for an insurance application can feel like guessing. Subsidies (Premium Tax Credits) are reconciled at tax time based on your actual final annual income.",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "If you underestimate your income:",
+          text: " you'll get larger subsidies up front, but you may have to pay some — or all — of that money back to the IRS when you file.",
+        },
+        {
+          bold: "If you overestimate your income:",
+          text: " you'll pay higher monthly premiums during the year, but you'll get the difference back as a tax refund at filing time.",
+        },
+      ],
+    },
+    {
+      type: "heading",
+      text: "A Realistic Strategy for Variable Income",
+    },
+    {
+      type: "bullets",
+      items: [
+        { bold: "1. Start with last year's baseline:", text: " use your prior Schedule C as a starting estimate." },
+        { bold: "2. Adjust for realistic changes:", text: " did you lose a major retainer, or raise your rates?" },
+        {
+          bold: "3. Update the Marketplace mid-year:", 
+          text: " if your income shifts significantly, log in and update your estimate right away to recalculate your monthly subsidy.",
+        },
+      ],
+    },
+    {
+      type: "pro_tip",
+      text: "You don't have to wait for Open Enrollment to update your income estimate. If you sign a big contract in June or lose a client in August, report it immediately — it directly affects your monthly subsidy amount.",
+    },
+
+    {
+      type: "heading",
+      text: "Double-Dipping the Tax Savings",
+    },
+    {
+      type: "paragraph",
+      text: "One of the best financial advantages of being self-employed is how ACA subsidies interact with tax deductions:",
+    },
+    {
+      type: "bullets",
+      items: [
+        {
+          bold: "Upfront subsidies:",
+          text: " depending on your income relative to the Federal Poverty Level, the ACA provides tax credits that lower your monthly premium invoice directly.",
+        },
+        {
+          bold: "Above-the-line tax deduction:",
+          text: " whatever portion of the premium you pay out-of-pocket can usually be claimed as a Self-Employed Health Insurance Deduction on your federal return, lowering your taxable income without requiring you to itemize.",
+        },
+      ],
+    },
+
+    {
+      type: "heading",
+      text: "Key Takeaways Before You Apply",
+    },
+    {
+      type: "bullets",
+      items: [
+        { bold: "Never report gross income.", text: " Always deduct legitimate business expenses first." },
+        {
+          bold: "Keep bookkeeping current.",
+          text: " Using software like QuickBooks or Wave makes calculating your actual net income simple.",
+        },
+        {
+          bold: "Don't hide income drops.",
+          text: " If you have a slow quarter, update your ACA application so your monthly premium drops when you need the cash flow most.",
+        },
+      ],
+    },
+
+    {
+      type: "closing",
+      text: "Reporting income correctly is the single biggest lever self-employed workers have over their ACA costs. Track your net profit carefully, claim every eligible deduction, and update your estimate as soon as your income changes — it's the difference between a subsidy that works for you and a surprise tax bill next April.",
+    },
+  ],
+},
+  {
     slug: "aca-health-insurance-before-65-early-retirees",
     title: "Unlocking ACA Health Insurance Before 65: A Practical Guide for Early Retirees",
     excerpt:
