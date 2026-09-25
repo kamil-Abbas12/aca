@@ -86,45 +86,81 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
         </div>
       );
 
-    case "table":
+      case "table":
       return (
-        <div key={index} className="mb-6 overflow-x-auto rounded-xl ring-1 ring-black/10 shadow-sm">
-          <table className="w-full min-w-[560px] border-collapse text-sm">
-            <thead>
-              <tr className="bg-blue-700 text-white">
-                {block.headers.map((header, h) => (
-                  <th
-                    key={h}
-                    className="px-4 py-3 text-left font-bold tracking-wide"
+        <div key={index} className="mb-6">
+          {/* Desktop / tablet: standard table */}
+          <div className="hidden sm:block overflow-x-auto rounded-xl ring-1 ring-black/10 shadow-sm">
+            <table className="w-full min-w-[560px] border-collapse text-sm">
+              <thead>
+                <tr className="bg-blue-700 text-white">
+                  {block.headers.map((header, h) => (
+                    <th
+                      key={h}
+                      className="px-4 py-3 text-left font-bold tracking-wide"
+                    >
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row, r) => (
+                  <tr
+                    key={r}
+                    className={r % 2 === 0 ? "bg-white" : "bg-blue-50"}
                   >
-                    {header}
-                  </th>
+                    {row.map((cell, c) => (
+                      <td
+                        key={c}
+                        className={`px-4 py-3 text-[#0b2b55]/90 border-b border-gray-100 ${
+                          c === 0 ? "font-bold text-[#0b2b55]" : ""
+                        }`}
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
-            </thead>
-            <tbody>
-              {block.rows.map((row, r) => (
-                <tr
-                  key={r}
-                  className={r % 2 === 0 ? "bg-white" : "bg-blue-50"}
-                >
-                  {row.map((cell, c) => (
-                    <td
-                      key={c}
-                      className={`px-4 py-3 text-[#0b2b55]/90 border-b border-gray-100 ${
-                        c === 0 ? "font-bold text-[#0b2b55]" : ""
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile: stacked card layout — no horizontal scroll */}
+          <div className="sm:hidden space-y-3">
+            {block.rows.map((row, r) => (
+              <div
+                key={r}
+                className="overflow-hidden rounded-xl ring-1 ring-black/10 shadow-sm"
+              >
+                {row.map((cell, c) => (
+                  <div
+                    key={c}
+                    className={`flex flex-col gap-0.5 px-4 py-2.5 border-b border-gray-100 last:border-b-0 ${
+                      c === 0 ? "bg-blue-700" : r % 2 === 0 ? "bg-white" : "bg-blue-50"
+                    }`}
+                  >
+                    <span
+                      className={`text-[10px] font-bold uppercase tracking-wide ${
+                        c === 0 ? "text-blue-100" : "text-[#0b2b55]/50"
+                      }`}
+                    >
+                      {block.headers[c]}
+                    </span>
+                    <span
+                      className={`text-sm ${
+                        c === 0 ? "font-bold text-white" : "text-[#0b2b55]/90"
                       }`}
                     >
                       {cell}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       );
-
     case "closing":
       return (
         <p
