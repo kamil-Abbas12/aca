@@ -1,6 +1,6 @@
 // app/api/contact/route.ts
-import getClientPromise from "@/app/lib/mongodb";
-import clientPromise from "@/app/lib/mongodb";
+import getClientPromise from "@/lib/mongodb";
+import clientPromise from "@/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 

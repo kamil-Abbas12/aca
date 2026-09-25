@@ -7,6 +7,7 @@ import Step from "./components/Steps";
 import Healthcare from "./components/Healthcare";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
+import QuoteForm from "./components/QuoteForm";
 
 // ── Page-level metadata (overrides layout defaults for the home page) ──────────
 export const metadata: Metadata = {
@@ -54,6 +55,7 @@ export default function Home() {
           understand page structure.
         */}
         <Hero />
+        <QuoteForm/>
         <Step />
         <Healthcare />
         <Blog />
