@@ -2,6 +2,7 @@ import { BLOGS, ContentBlock } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import RelatedArticles from "@/app/components/RelatedArticles";
+import ReactMarkdown from "react-markdown";
 
 const BASE_URL = "https://affordablecareact.topdoglead.com";
 
@@ -45,10 +46,16 @@ function RenderBlock({ block, index }: { block: ContentBlock; index: number }) {
         </h2>
       );
 
-    case "paragraph":
+      case "paragraph":
       return (
         <p key={index} className="mb-4 leading-relaxed text-[#0b2b55]/90">
-          {block.text}
+          <ReactMarkdown
+            components={{
+              p: ({ children }) => <>{children}</>, // prevent nested <p><p>
+            }}
+          >
+            {block.text}
+          </ReactMarkdown>
         </p>
       );
 

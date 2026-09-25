@@ -21,6 +21,160 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+    {
+    slug: "aca-health-insurance-marketplace",
+    title: "ACA Health Insurance Marketplace",
+    excerpt:
+      "Shopping for health insurance on your own can feel like an alphabet soup of deductibles, copays, coinsurance, and premiums. Here's a practical, grounded breakdown of how the Marketplace actually works and how to choose a plan without losing your sanity.",
+    caption:
+      "From decoding metal tiers to catching the subsidy repayment trap, here's a practical, grounded breakdown of how the ACA Marketplace actually works.",
+    date: "2026-09-25",
+    category: "Health Insurance",
+    readTime: "5 min read",
+    image: "/aca-health-insurance-marketplace.webp",
+    content: [
+      {
+        type: "paragraph",
+        text: "If you've ever tried shopping for health insurance on your own, you know the feeling: you open a browser tab, start looking at plan tiers, and suddenly find yourself staring at an alphabet soup of deductibles, copays, coinsurance, and premiums. Within twenty minutes, you're ready to close the tab and just hope for the best.",
+      },
+         {
+  type: "paragraph",
+  text: "The Affordable Care Act (ACA) Marketplace often called HealthCare.gov or \"Obamacare\" was built to make buying individual health insurance accessible. But accessibility doesn't always mean *simplicity*.",
+},
+      {
+        type: "paragraph",
+        text: "Whether you're self-employed, changing jobs, or simply trying to get covered without overpaying, here is a practical, grounded breakdown of how the Marketplace actually works and how to choose a plan without losing your sanity.",
+      },
+
+      {
+        type: "heading",
+        text: "1. What the Marketplace Actually Is (and isn't)",
+      },
+      {
+        type: "paragraph",
+        text: "Think of the ACA Marketplace as a centralized comparison-shopping site for health insurance. The government doesn't sell you insurance directly; instead, private insurance companies (like Blue Cross, Kaiser, or Ambetter) list their regulated plans on the platform.",
+      },
+      {
+        type: "paragraph",
+        text: "To be sold on the Marketplace, every plan must cover 10 essential health benefits, including:",
+      },
+      {
+        type: "bullets",
+        items: [
+          { text: "Emergency services and hospitalization" },
+          { text: "Outpatient care (doctor visits)" },
+          { text: "Prescription drugs" },
+          { text: "Mental health and substance use care" },
+          { text: "Maternity and newborn care" },
+          { text: "Free preventive care (like annual checkups, routine screenings, and vaccines)" },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Crucially, no Marketplace plan can deny you coverage or charge you more for pre-existing conditions. If you have asthma, diabetes, or a history of surgery, you pay the exact same baseline rate as someone with a clean medical bill.",
+      },
+
+      {
+        type: "heading",
+        text: "2. Decode the Metal Tiers: It's Not About Quality",
+      },
+           {
+        type: "paragraph",
+        text: "Marketplace plans are grouped into four main \"metal\" tiers: **Bronze, Silver, Gold, and Platinum.**",
+      },
+      {
+        type: "paragraph",
+        text: "A common misconception is that a gold plan offers better medical care than a bronze plan. It doesn't. A doctor's visit costs the same effort regardless of tier. The metal tier simply reflects how you and the insurance company split the bill:",
+      },
+      {
+        type: "table",
+        headers: ["Plan", "You Pay", "Insurers Pay", "What It Means"],
+        rows: [
+          ["Bronze Plan", "40%", "60%", "Lowest premium, highest deductible"],
+          ["Silver Plan", "30%", "70%", "Moderate cost, unlocks cost-sharing savings"],
+          ["Gold / Platinum", "10-20%", "80-90%", "Highest premium, lowest out-of-pocket costs"],
+        ],
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Bronze:",
+            text: " Low monthly payments, but high deductibles. Best if you rarely see a doctor and just want emergency protection.",
+          },
+          {
+            bold: "Silver:",
+            text: " The middle ground. Important tip: If you qualify for income-based savings (Cost-Sharing Reductions), you must pick a silver plan to get those lower deductibles and copays.",
+          },
+          {
+            bold: "Gold & Platinum:",
+            text: " High monthly payments, but minimal out-of-pocket costs when you go to the doctor. Best if you require frequent care, brand-name prescriptions, or ongoing treatments.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "3. Subsidies: The Secret to Lowering Your Monthly Bill",
+      },
+      {
+        type: "paragraph",
+        text: "Most people using the Marketplace don't pay the sticker price. The federal government offers Premium Tax Credits (subsidies) based on your estimated household income for the upcoming year.",
+      },
+      {
+        type: "paragraph",
+        text: "When you apply, the system estimates your tax credit. You can apply that credit directly to your monthly premium, lowering what you pay out-of-pocket every month.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "The Trap to Avoid:",
+            text: " Subsidies are based on your projected income. If you estimate low and end up earning significantly more during the year (like hitting a big freelance milestone or getting a raise), you may have to pay back some of that subsidy at tax time. Keep your income projections as accurate as possible, and update your profile mid-year if your income changes significantly.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "4. How to Choose a Plan: A 4-Step Checklist",
+      },
+      {
+        type: "paragraph",
+        text: "Instead of staring at numbers until they blur together, follow this sequential filter:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "1. Check Your Doctors First:",
+            text: " Every plan has a network. If you love your primary doctor or therapist, check the plan's directory (or call your doctor's office) to see if they accept that specific Marketplace plan before looking at prices.",
+          },
+          {
+            bold: "2. Review Your Prescriptions:",
+            text: " Log into the Marketplace and add your regular medications. The system will filter plans based on how well they cover your exact drugs.",
+          },
+          {
+            bold: "3. Calculate \"Worst-Case Scenario\" Cost:",
+            text: " Add the annual premium (Monthly Cost × 12) to the plan's Max Out-of-Pocket limit. That number is the absolute maximum you would spend in a catastrophic health year. Sometimes a slightly higher monthly payment saves you thousands if you need unexpected care.",
+          },
+          {
+            bold: "4. Mind the Enrollment Window:",
+            text: " Open Enrollment usually runs from November 1 through January 15. If you miss this window, you can generally only enroll if you trigger a Qualifying Life Event (like losing job-based insurance, moving, getting married, or having a baby).",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "The Takeaway",
+      },
+      {
+        type: "closing",
+        text: "Buying health insurance isn't fun, but it doesn't have to be a trap. Don't fall for flashy \"cheap\" non-Marketplace plans sold elsewhere online that leave out essential coverage or exclude pre-existing conditions.",
+      },
+    ],
+  },
   {
     slug: "aca-health-insurance-self-employed-income",
     title: "ACA Health Insurance for Self-Employed Income",
