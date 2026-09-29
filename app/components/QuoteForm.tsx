@@ -56,6 +56,7 @@ export default function QuoteForm() {
   const [formError, setFormError] = useState("");
   const [jornayaReady, setJornayaReady] = useState(false);
   const [trustedReady, setTrustedReady] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   // Submit is only allowed once BOTH tokens exist
   const trackingReady = jornayaReady && trustedReady;
