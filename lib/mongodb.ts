@@ -15,18 +15,11 @@ function getClientPromise(): Promise<MongoClient> {
     throw new Error("Please add MONGODB_URI to your environment variables");
   }
 
-  if (process.env.NODE_ENV === "development") {
-    if (!global._mongoClientPromise) {
-      client = new MongoClient(uri);
-      global._mongoClientPromise = client.connect();
-    }
-    clientPromise = global._mongoClientPromise;
-  } else {
-    if (!clientPromise) {
-      client = new MongoClient(uri);
-      clientPromise = client.connect();
-    }
+  if (!global._mongoClientPromise) {
+    client = new MongoClient(uri);
+    global._mongoClientPromise = client.connect();
   }
+  clientPromise = global._mongoClientPromise;
 
   return clientPromise;
 }

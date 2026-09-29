@@ -17,8 +17,8 @@ function sanitizeState(e: React.FormEvent<HTMLInputElement>) {
 
 // Pulled out of useEffect so handleSubmit can call it directly too —
 // this guarantees the freshest possible token capture at submit time.
-// Returns true if a Jornaya token was successfully captured this call.
-function captureTrackingTokens(): boolean {
+// Reports Jornaya and TrustedForm readiness separately.
+function captureTrackingTokens(): { jornaya: boolean; trusted: boolean } {
   const leadidToken = document.querySelector<HTMLInputElement>(
     "#leadid_token, input[name='universal_leadid']"
   );
@@ -28,17 +28,25 @@ function captureTrackingTokens(): boolean {
     "input[name^='xxTrustedFormCertUrl'], input[id^='xxTrustedFormCertUrl']"
   );
 
-  let jornayaReady = false;
+  let jornaya = false;
+  let trusted = false;
 
   if (leadidToken && hidLeadid && leadidToken.value) {
     hidLeadid.value = leadidToken.value;
-    jornayaReady = true;
-  }
-  if (trustedToken && hidTrusted && trustedToken.value) {
-    hidTrusted.value = trustedToken.value;
+    jornaya = true;
   }
 
-  return jornayaReady;
+  // Must match the same pattern the server enforces in /api/submit-lead
+  if (
+    trustedToken &&
+    hidTrusted &&
+    /^https:\/\/cert\.trustedform\.com\//.test(trustedToken.value)
+  ) {
+    hidTrusted.value = trustedToken.value;
+    trusted = true;
+  }
+
+  return { jornaya, trusted };
 }
 
 export default function QuoteForm() {
@@ -47,15 +55,26 @@ export default function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formError, setFormError] = useState("");
   const [jornayaReady, setJornayaReady] = useState(false);
+  const [trustedReady, setTrustedReady] = useState(false);
+
+  // Submit is only allowed once BOTH tokens exist
+  const trackingReady = jornayaReady && trustedReady;
 
   useEffect(() => {
+    let polling: number | undefined;
+
     const poll = () => {
-      const ready = captureTrackingTokens();
-      if (ready) setJornayaReady(true);
+      const { jornaya, trusted } = captureTrackingTokens();
+      if (jornaya) setJornayaReady(true);
+      if (trusted) setTrustedReady(true);
+      // Stop polling once both are captured
+      if (jornaya && trusted && polling !== undefined) {
+        window.clearInterval(polling);
+      }
     };
 
     poll(); // check immediately on mount
-    const polling = window.setInterval(poll, 500); // fast poll, no timeout bypass
+    polling = window.setInterval(poll, 500); // fast poll, no timeout bypass
 
     const trustedFormField = "xxTrustedFormCertUrl";
     const provideReferrer = false;
@@ -89,7 +108,7 @@ export default function QuoteForm() {
     }
 
     return () => {
-      window.clearInterval(polling);
+      if (polling !== undefined) window.clearInterval(polling);
     };
   }, []);
 
@@ -98,14 +117,17 @@ export default function QuoteForm() {
     if (isSubmitting) return;
 
     // Final safety check — capture right now in case state hasn't
-    // re-rendered yet. Strictly block if no real token exists yet —
+    // re-rendered yet. Strictly block unless BOTH real tokens exist —
     // no fallback bypass.
-    const readyNow = captureTrackingTokens();
-    if (!jornayaReady && !readyNow) {
+    const now = captureTrackingTokens();
+    const jornayaOk = jornayaReady || now.jornaya;
+    const trustedOk = trustedReady || now.trusted;
+    if (!jornayaOk || !trustedOk) {
       setFormError("Still verifying your session — please wait a moment.");
       return;
     }
-    if (readyNow) setJornayaReady(true);
+    if (now.jornaya) setJornayaReady(true);
+    if (now.trusted) setTrustedReady(true);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -165,8 +187,11 @@ export default function QuoteForm() {
 
       if (result.success) {
         alert("Thank you! We'll be in touch shortly.");
-        form.reset();
-        setHasInsurance(null);
+        // form.reset() would wipe the hidden Jornaya/TrustedForm tokens, and
+        // TrustedForm won't issue a new cert without a fresh page load.
+        // Reload so the next lead gets fresh tokens.
+        window.location.reload();
+        return;
       } else {
         alert("Something went wrong. Please try again or call us directly.");
       }
@@ -511,17 +536,17 @@ export default function QuoteForm() {
                 </div>
               )}
 
-              {/* Submit */}
+              {/* Submit — disabled until BOTH Jornaya and TrustedForm tokens exist */}
               <button
                 id="btnSubmit"
                 type="submit"
-                disabled={isSubmitting || !jornayaReady}
+                disabled={isSubmitting || !trackingReady}
                 className="group relative w-full overflow-hidden rounded-xl bg-blue-700 px-5 py-4 font-extrabold text-white shadow-lg shadow-blue-700/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   {isSubmitting ? (
                     "Submitting..."
-                  ) : !jornayaReady ? (
+                  ) : !trackingReady ? (
                     <>
                       <Loader2 className="h-4 w-4 animate-spin" />
                       Preparing Form...
@@ -539,7 +564,7 @@ export default function QuoteForm() {
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               </button>
 
-              {!jornayaReady && !isSubmitting && (
+              {!trackingReady && !isSubmitting && (
                 <p className="text-center text-xs text-[#0b2b55]/40">
                   Verifying your session — this usually only takes a second or two.
                 </p>
