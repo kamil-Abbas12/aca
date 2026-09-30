@@ -21,6 +21,171 @@ export interface BlogPost {
 }
 
 export const BLOGS: BlogPost[] = [
+  {
+    slug: "how-to-cover-your-spouse-and-kids-on-one-aca-plan",
+    title: "How to Cover Your Spouse and Kids on One ACA Plan",
+    excerpt:
+      "Sorting out health insurance for an entire household can feel like solving a puzzle where half the pieces look identical. Here's how to put your spouse and kids on a single ACA plan — from tax households to metal tiers to enrollment windows.",
+    caption:
+      "One premium, one deductible structure, and one online portal. Here's how to combine your whole family onto a single ACA plan without costly missteps.",
+    date: "2026-09-30",
+    category: "Family Plans",
+    readTime: "5 min read",
+    image: "/how-to-cover-your-spouse-and-kids-on-one-aca-plan.webp",
+    content: [
+      {
+        type: "paragraph",
+        text: "Trying to sort out health insurance for an entire household can feel like solving a puzzle where half the pieces look identical. If you're self-employed, working a job without health benefits, or simply trying to get everyone off separate, fragmented policies, putting your spouse and kids on a single Affordable Care Act (ACA) plan is often the simplest way forward.",
+      },
+      {
+        type: "paragraph",
+        text: "Having one monthly premium, one deductible structure, and one online portal makes managing family care far less head-splitting. However, combining everyone onto one policy requires a few important strategic decisions.",
+      },
+
+      {
+        type: "heading",
+        text: "1. Get Your \"Tax Household\" Straight First",
+      },
+      {
+        type: "paragraph",
+        text: "The ACA looks at coverage through the lens of tax filing. When you apply for a family Marketplace plan, your eligibility for subsidies (financial help that lowers your monthly payments) depends on who you claim on your federal tax return.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Who counts:",
+            text: " You, your spouse (if you file jointly), and any children or dependents you claim on your taxes.",
+          },
+          {
+            bold: "Adult children under 26:",
+            text: " Under the ACA, adult children can stay on your plan until they turn 26, even if they are married, living elsewhere, or no longer claimed as dependents on your taxes.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "**A quick tip:** If you are married, filing jointly is generally required to qualify for premium tax credits on the Marketplace. If you file separately, you usually lose out on those savings.",
+      },
+
+      {
+        type: "heading",
+        text: "2. Look Out for the \"Family Glitch\" Fix",
+      },
+      {
+        type: "paragraph",
+        text: "For years, millions of families were locked out of Marketplace subsidies because of a flaw known as the \"family glitch.\" If an employer offered affordable coverage *just for the employee*, the family couldn't get ACA savings even if adding the spouse and kids to the employer's plan cost an absolute fortune.",
+      },
+      {
+        type: "paragraph",
+        text: "That rule was updated. Now, employer coverage is judged on whether the cost to insure the **entire family** is affordable (meaning it costs less than ~9% of your total household income).",
+      },
+      {
+        type: "paragraph",
+        text: "If your employer's family plan is ridiculously expensive, your spouse and kids may now be eligible for subsidized ACA coverage on the exchange. It's worth running the numbers on HealthCare.gov to see if switching to a unified ACA plan saves you money compared to a workplace plan.",
+      },
+
+      {
+        type: "heading",
+        text: "3. Pick the Right Metal Tier for a Whole Group",
+      },
+      {
+        type: "paragraph",
+        text: "When you choose a single plan for a family, balancing healthy members with high-utilization members gets tricky. ACA plans are split into four main \"metal\" tiers: Bronze, Silver, Gold, and Platinum.",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "Bronze:",
+            text: " Lowest monthly payments, but high deductibles. This works best if your household is generally healthy and you mostly want protection against catastrophic medical events.",
+          },
+          {
+            bold: "Silver:",
+            text: " The sweet spot for most families. If your income qualifies you for **Cost-Sharing Reductions (CSRs)**, Silver plans give you drastically lower deductibles and copays without a massive leap in monthly premiums.",
+          },
+          {
+            bold: "Gold / Platinum:",
+            text: " Higher monthly costs, but low deductibles and low copays. If you have young kids who need frequent doctor visits, ER trips, or specialists, paying more upfront per month can save you money overall.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "4. Run the \"Combined Risk\" Math",
+      },
+      {
+        type: "paragraph",
+        text: "When everyone is on one policy, you have a family deductible and a family out-of-pocket maximum.",
+      },
+      {
+        type: "paragraph",
+        text: "Typically, family plans have both *individual* and *family* caps. For example, if an individual deductible on the plan is $3,000 and the family deductible is $6,000:",
+      },
+      {
+        type: "bullets",
+        items: [
+          { text: "Once one person hits $3,000, their insurance kicks in for them." },
+          {
+            text: "Once any combination of family members reaches $6,000 total, insurance kicks in for the entire household for the rest of the year.",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If you have a busy household with active kids, reaching that shared family maximum happens much faster than if everyone were on individual plans, giving you financial peace of mind earlier in the plan year.",
+      },
+
+      {
+        type: "heading",
+        text: "5. Check the Doctors and the Formulary (Double-Check It)",
+      },
+      {
+        type: "paragraph",
+        text: "Before you hit submit on a family policy, confirm two critical details:",
+      },
+      {
+        type: "bullets",
+        items: [
+          {
+            bold: "1. Pediatric and Adult Doctors:",
+            text: " Make sure your preferred family physician, your spouse's specialists, and your kids' pediatrician are all in the plan's in-network list. ACA networks can be tight (HMOs are common), and going out-of-network usually means paying 100% out of pocket.",
+          },
+          {
+            bold: "2. Prescriptions:",
+            text: " Pull together a list of every daily medication your household takes. Check the plan's *formulary* (drug list) to see which tier those medications fall under. A lower premium plan isn't a deal if your child's asthma inhaler or your spouse's prescription isn't covered.",
+          },
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "How to Get Enrolled",
+      },
+      {
+        type: "paragraph",
+        text: "You can enroll the family during the annual **Open Enrollment Period** (typically November 1 through January 15 in most states).",
+      },
+      {
+        type: "paragraph",
+        text: "If you miss that window, you can enroll anytime during the year if you experience a **Qualifying Life Event**, such as:",
+      },
+      {
+        type: "bullets",
+        items: [
+          { text: "Having a baby or adopting" },
+          { text: "Getting married" },
+          { text: "Losing job-based health coverage" },
+          { text: "Moving to a new state or zip code" },
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "When you apply, have your household's estimated annual income, Social Security numbers, and current policy details handy. The setup takes less than an hour, and once it's done, your whole house is covered under a single, manageable safety net.",
+      },
+    ],
+  },
     {
     slug: "aca-health-insurance-marketplace",
     title: "ACA Health Insurance Marketplace",
